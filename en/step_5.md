@@ -30,17 +30,17 @@ So, your to-do list works now, but it's always the same. You can fix that! The â
     newToDoItem(itemText,false)
 ```
 
-   > ### Don't repeat yourself!
-   >
-   > You can also use `newToDoItem` in `loadList` to reduce the amount of code you've got to manage. You can replace all the code in the **function** with this:
-   >
-   > ```JavaScript
-   >  newToDoItem("My",false)
-   >  newToDoItem("to-do",true)
-   >  newToDoItem("list",false)
-   > ```
-   >
-   > You've gone from 17 lines of code to 3, and that's the power of **functions**! Try to understand how this works and how it's doing the exact same job as the old version of `loadList` was.
+### Don't repeat yourself!
+
++ You can also use `newToDoItem` in `loadList` to reduce the amount of code you've got to manage. You can replace all the code in the **function** with this:
+
+```JavaScript
+    newToDoItem("My",false)
+    newToDoItem("to-do",true)
+    newToDoItem("list",false)
+```
+
+You've gone from 17 lines of code to 3, and that's the power of **functions**! Try to understand how this works and how it's doing the exact same job as the old version of `loadList` was.
 
 
 

@@ -29,9 +29,9 @@ So, with three to-dos to add to your **array**, how do you do that? You can crea
               }
 ```
 
-The **object** is wrapped in curly braces \(`{ }`\) and stores pairs of **keys** \(`text`\) and **values** \(`Buy milk`\). Now it's time to put your **objects** into your **array** to make a list you can load when the page does!
+The **object** is wrapped in curly braces \(`{ }`\) and stores pairs of **keys** \(`text`\) and **values** \(`Buy milk`\). 
 
-+ So, change the contents of the `loadList` function like this \(but use the to-dos you made up!\):
++ Now it's time to put your **objects** into your **array** to make a list you can load when the page does! So, change the contents of the `loadList` function like this \(but use the to-dos you made up!\):
 
 ```JavaScript
   toDoItems = [
@@ -67,15 +67,12 @@ You can see that these three items each have their `text` and their `completed` 
 ```
 
 This code:
-
   1. Creates a piece of HTML \(a `li` or list item element\) and stores it in the `listItem` variable. 
   2. Then an `itemText` variable is created and a `TextNode` \(the bit of text that'll sit inside the HTML tag\) is stored in it with the `text` of the `toDoItem` that was passed into the function. 
   3. Then it adds \(“appends”\) the `itemText` inside the `listItem` element.
   4. If the `toDoItem`'s `completed` property is `true`, then it adds a `class` to the item. This tells the HTML page to display the completed task differently \(based on some code I wrote for you\). If you've done the **HTML/CSS Sushi Cards** then you can take a look at the CSS files and edit what they look like if you want!
 
-Now you can create the HTML for a list item, you need to add it to the list. 
-
-+ Add this to the `loadList` function, after the **array** of items.
++ Now you can create the HTML for a list item, you need to add it to the list. Add this to the `loadList` function, after the **array** of items.
 
 ```JavaScript
   toDoList = document.getElementById("todo")

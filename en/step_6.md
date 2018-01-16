@@ -16,9 +16,10 @@ What's happening here is:
 1. JavaScript is **listening** to all double-clicks that happen on the `todo` list
 2. If it “hears” one, it runs a **function**, into which it passes the details of the click `event`
 3. If the `event` had a `target` (a thing that was clicked on) and that `target` matches `"li"`, which is the HTML tag for a **list item** then:
-    * Run `toggleToDoItemState` and pass it the `event.target` information
+    4. Run `toggleToDoItemState` and pass it the `event.target` information
 
 + Next, you need to update your `toggleToDoItemState` function so it adds the `completed` **class** (a HTML property—a **tag**, like `<li>` can have many **classes**) to the item that was double-clicked, which will put a line through it using some of my CSS code. Thankfully, in modern JavaScript, that's pretty simple! Just update this to `toggleToDoItemState`:
+
 ```JavaScript
   function toggleToDoItemState(target){
     target.classList.toggle("completed")

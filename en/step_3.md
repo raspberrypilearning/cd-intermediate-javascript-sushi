@@ -13,13 +13,11 @@ From the *Beginner JavaScript Sushi Cards*, you will hopefully remember that a J
 Almost all the **functions** you need are in the file already, though they don't do anything cool yet. They just send **alert messages** (pop-up boxes) telling you what **function** was called and what the values in the parameters were. Read through them to understand what's there. 
 
 + There's one missing, that you need to add. Create a new function in `to-do.js` that:
-    * Is called `toggleToDoItemState`
-    * Accepts a parameter: `listItem`
-    * When called, alerts the message `"Toggling state of item "+itemId`
+    1. Is called `toggleToDoItemState`
+    2. Accepts a parameter: `listItem`
+    3. When called, alerts the message `"Toggling state of item "+itemId`
 
-Now you need to tell JavaScript to **listen** for a **click** on the buttons, then do something. Each of the buttons on the page has a unique `id`. You can use that `id` to tell **JavaScript** what to listen to. 
-
-+ Add the following code instead of the `alert` into the `runWhenPageLoads` function:
++ Now you need to tell JavaScript to **listen** for a **click** on the buttons, then do something. Each of the buttons on the page has a unique `id`. You can use that `id` to tell **JavaScript** what to listen to. Add the following code instead of the `alert` into the `runWhenPageLoads` function:
 ```JavaScript
     document.getElementById("add-button").addEventListener("click", addToDoItem)
 ```
