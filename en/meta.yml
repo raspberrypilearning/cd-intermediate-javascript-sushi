@@ -12,5 +12,9 @@ technologies: "electronics, sense-hat, physical computing, html/css, scratch, py
 site_areas:
 steps:
   - title: Introduction
-  - title: What you will need
-  - title: Step title
+  - title: Getting Setup
+  - title: Wiring up buttons
+  - title: Creating a list
+  - title: Adding to-dos
+  - title: Completing items
+  - title: Cleaning the list

@@ -1,6 +1,9 @@
 ## Introduction
 
-Add project description here. What will learners be making?
+In these cards you're going to make the to-do app you can see at [dojo.soy/js-todo](http://dojo.soy/js-todo). This app can be used to track whatever you want: cool programming tricks you want to learn, places to go, songs to listen to (or learn to play!), or something as simple as things to pick up at the shops.
+
+These are the Intermediate Sushi Cards, so I'll sometimes tell you to do things without showing you how they're done. In those cases, they're almost always something that you can see in the Beginner JavaScript Sushi Cards.
+
 
 ### What you will make
 
@@ -14,12 +17,4 @@ Add instructions here. These should explain either how the finished project will
 
 ### What you will learn
 
-This project covers elements from the following strands of the [Raspberry Pi Digital Making Curriculum](http://rpf.io/curriculum){:target="_blank"}:
 
-+ [Add curriculum strand/level description.](https://www.raspberrypi.org/curriculum/strand/level){:target="_blank"}
-
-### Additional information for educators
-
-If you need to print this project, please use the [printer-friendly version](https://projects.raspberrypi.org/en/projects/project-name/print){:target="_blank"}.
-
-Use the link in the footer to access the GitHub repository for this project, which contains all resources (including an example finished project) in the 'en/resources' folder.
