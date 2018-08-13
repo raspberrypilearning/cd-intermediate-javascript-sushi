@@ -1,89 +1,113 @@
-## Creating a list
+## Wiring up buttons
 
-Right now, the to-do list on the page is just some HTML that I put in there so you'd have something to look at! Time to make it yours: 
+The code you've got to start off with includes three files:
+  - `index.html` — a HTML file that tells the page what should be on it.
+  - `style.css` — a CSS file that tells the page what it should look like: where things should be, what size and colour they should be, etc.
+  - `script.js` — a JavaScript file that tells the page what to do. You'll be doing most of your coding in this file.
 
-+ Go into `index.html` and delete the four lines that start with `<li>` tags. If nothing's changed, they'll be lines 23–26. Then reload `index.html` in your browser. It looks a little empty, but you'll fix that soon!
+If you look at the page, you'll see it has four buttons:
 
-+ Inside the `runWhenPageLoads` function, call the `runWhenPageLoads` function. Reload `index.html` to check that it's being called. If you got the **alert** then you're all set!
+  - An 'Add' button for adding new to-dos
+  - A 'Clear Completed' button for clearing to-dos that you've marked as finished
+  - An 'Empty List' button for completely emptying the to-do list
+  - A 'Save List' button for saving what's on the list
 
-Now you need to make the `loadList` function actually load a list! For now, it's going to be a sort of a “demo list”. Later, I'll show you how to save a to-do list and load it when you re-open the page. 
+Of course, since you haven't written your program yet, right now none of them work!
 
-First, let's talk about lists in JavaScript. Lists, or **arrays** as they're called in JavaScript, are groups of the same kind of **variable** \(number, text, etc.\) in order. They don't need individual names, since you can look them up from the **array**. You use square brackets \(`[]`\) to create an **array**. They're also a kind of **variable**, so you can give them names like any other **variable** \(and yes, you can have **arrays** of **arrays**, but we're not doing that just yet!\). 
+Since you want to make the page *do* something, you need to click on the tab for `script.js` and add some code in there. These instructions will show you how to setup the 'Add' button and then you can do the others yourself.
 
-+ Change the contents of the `loadList` to create an empty **array** called `toDoItems` like this:
+JavaScript needs to be told which parts of the HTML page are important and what things that a user might do to them it should react to. In this case, you want to tell it about the 'Add' button and tell it to react when that button is clicked.
 
-```JavaScript
-  toDoItems = [ ]
-```
-
-You now need to add some things to that **array**. There's a problem, though: a to-do has two parts! You need to know what it is \(a **string** of text\) **and** whether or not it has been completed yet \(a true/false value\). Because the need to know if things are true or false is so common \(is the user signed in? does the player have more than 10 points? etc.\) JavaScript has a special kind of variable for true/false values. It's called a **boolean** and it can only be either `true` or `false`. 
-
-+ Now you know what you need, make up three to-do items for your list and decide which one you'll mark done \(to show the user they can do that\).
-
-So, with three to-dos to add to your **array**, how do you do that? You can create an **object variable** in JavaScript that contains related **variables**. In the case of your to-dos that will be their `text` and their `completed` state \(either `true` or `false`\). Here's an example object:
-
-```JavaScript
-  exampleToDo = {
-              text: "Buy milk",
-              completed: false
-              }
-```
-
-The **object** is wrapped in curly braces \(`{ }`\) and stores pairs of **keys** \(`text`\) and **values** \(`Buy milk`\). 
-
-+ Now it's time to put your **objects** into your **array** to make a list you can load when the page does! So, change the contents of the `loadList` function like this \(but use the to-dos you made up!\):
+### Getting the button
+--- task ---
+Start by making a variable for the button and telling JavaScript to get the **element** from the HTML **document** that has the **id** `add-button`. 
 
 ```JavaScript
-  toDoItems = [
-    {
-      "text": "My",
-      "completed": false
-    },
-    {
-      "text": "to-do",
-      "completed": true
-    },
-    {
-      "text": "list",
-      "completed": true
-    }
-  ]
+var addButton = document.getElementById("add-button");
 ```
+--- /task ---
 
-You can see that these three items each have their `text` and their `completed` status and that they're stored in an **array**. However, you still need to put them on the page. 
+An id is a unique label for a part of a web page and when we made the starter page we gave one to each of the buttons. You can see them if you look at `index.html`.
 
-+ Inside the `getToDoItemHTML` function, add this bit of code:
+### Listening for the click
+--- task ---
+Next connect your button to a listener, so JavaScript will 'listen' for a particular kind of event and then run a function when it 'hears' it. In this case, the event is a click. Do this with the `addEventListener` function, like this:
 
 ```JavaScript
-  var listItem = document.createElement("li")
-  var itemText = document.createTextNode(toDoItem.text)
-  listItem.appendChild(itemText)
-
-  if(toDoItem.completed === true){
-  listItem.classList.add("completed")
-  }
-
-  return listItem
+addButton.addEventListener("click", addToDoItem);
 ```
+--- /task ---
 
-This code:
-  1. Creates a piece of HTML \(a `li` or list item element\) and stores it in the `listItem` variable. 
-  2. Then an `itemText` variable is created and a `TextNode` \(the bit of text that'll sit inside the HTML tag\) is stored in it with the `text` of the `toDoItem` that was passed into the function. 
-  3. Then it adds \(“appends”\) the `itemText` inside the `listItem` element.
-  4. If the `toDoItem`'s `completed` property is `true`, then it adds a `class` to the item. This tells the HTML page to display the completed task differently \(based on some code I wrote for you\). If you've done the **HTML/CSS Sushi Cards** then you can take a look at the CSS files and edit what they look like if you want!
+This listener will 'listen' for a click on `addButton` and will then run the `addToDoItem` function when it 'hears' the click. Of course, it won't work right now since you haven't written an `addToDoItem` function yet!
 
-+ Now you can create the HTML for a list item, you need to add it to the list. Add this to the `loadList` function, after the **array** of items.
+### Creating the function
+Later in the project you'll be making functions that create todo items, clear the list, save it, etc. For now though, you just want to check that you've conencted your listeners properly. 
+
+--- task ---
+Make a function that will pop an alert to the user telling them which button they clicked.
 
 ```JavaScript
-  toDoList = document.getElementById("todo")
-
-  toDoItems.forEach(function(toDoItem){
-    itemHTML = getToDoItemHTML(toDoItem)
-    toDoList.append(itemHTML)
-  })
+function addToDoItem() {
+  alert("Add button clicked!");
+}
 ```
+--- /task ---
 
-This code uses `forEach`, which goes through every item in the **array** and **appends** it to the to-do list, selected by its `id` in the HTML.
+Now click the button and check if it works!
+
+### Connect the other buttons
+Now connect the other three buttons:
+
+--- task ---
+Connect the 'Clear Completed' button — which has the id `clear-completed-button` — to an alerting function called `clearCompletedToDoItems`.
+--- /task ---
+
+--- task ---
+Connect the 'Empty List' button — which has the id `empty-button` — to an alerting function called `emptyList`.
+--- /task ---
+
+--- task ---
+Connect the 'Empty List' button — which has the id `save-button` — to an alerting function called `saveList`.
+--- /task ---
+
+--- hints ---
+--- hint ---
+For each of the buttons you need to:
+
+  - Create a **varaiable** and get the button in the HTML **document** using its **id**
+  - Add an **event listener** to the **varaible**, listening for the **click event** and calling the appropriately named **function** when it hears it
+  - Create the appropriate **function** (e.g. `clearCompletedToDoItems`) and code it to **alert** the user, telling them which button has been clicked
+
+--- /hint ---
+--- hint ---
+Here you can see the code you need to add, below the code you've already written:
+
+```JavaScript
+var addButton = document.getElementById("add-button");
+addButton.addEventListener("click", addToDoItem);
+function addToDoItem() {
+    alert("Add button clicked!");
+}
+
+var clearButton = document.getElementById("clear-completed-button");
+clearButton.addEventListener("click", clearCompletedToDoItems);
+function clearCompletedToDoItems() {
+    alert("Clear button clicked!");
+}
 
 
+var emptyButton = document.getElementById("empty-button");
+emptyButton.addEventListener("click", emptyList);
+function emptyList() {
+    alert("Empty button clicked!");
+}
 
+
+var saveButton = document.getElementById("save-button");
+saveButton.addEventListener("click", saveList);
+function saveList() {
+    alert("Save button clicked!");
+}
+```
+--- /hint ---
+--- /hints ---

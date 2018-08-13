@@ -1,26 +1,35 @@
-## Cleaning the list
+## Clearing the list
+Once you've marked items completed, you want a way to remove all those completed items from the list. Also, if you come back to your list after a long time, or just want to work on something totally new, you might want to clear everything off it. To do this you just need to update two functions you've already connected to buttons: `clearCompletedToDoItems` and `emptyList`.
 
-If your user wants to empty their to-do list (say they've been playing with it and added a lot of stuff that's not real), you can let them do that. It's pretty easy actually! All you need to do is empty the ordered list in the HTML. 
+### Clearing completed items
+Just like you can select all the elements in a HTML document, you can select the elements *inside* any other element. Elements inside another element are called the **children** of that element. Likewise, just like you can select them by id, you can select them by class too.
 
-+ To empty the *ol* in the HTML isn't too tricky. Just add the following code into the end of your *emptyList* function:
-
-```JavaScript
-  document.getElementById("todo").innerHTML = ""
-```
-
-This tells JavaScript to get the to-do list and remove all the HTML inside it. That removes all the `<li>` tags, which are the to-do items!
-
-Now, what about those crossed-out items? It's going to get very messy if you don't let users clean them up too. They all have the same **class**—`completed`—so you can use that to pick out the items to remove by selecting based on **class** instead of **id**.
-
-+ Change `clearCompletedToDoItems` like this:
+--- task ---
+In order to clear completed items, update `clearCompletedToDoItems` to select items inside `toDoList` by the `completed` class and then loop through them and remove them. 
 
 ```JavaScript
-  function clearCompletedToDoItems() {
-    var items = document.getElementsByClassName("completed")
-    for(var i=0; i<items.length; i++){
-      items[i].remove()
+function clearCompletedToDoItems() {
+    var completedItems = toDoList.getElementsByClassName("completed");
+
+    while (completedItems.length > 0) {
+        completedItems.item(0).remove();
     }
-  }
+}
 ```
+--- /task ---
 
-This code is slightly tricky, but it's getting an a list of all the HTML **elements** with the `completed` **class** and then using a `for` loop
+Notice that you're always removing the item at position `0` in the list. This is because the list gets shorter every time you remove an item and this way you'll eventually remove them all!
+
+### Clearing everything
+--- task ---
+To clear everything on the list, do the same thing as above, but select *all* the children of `toDoList`.
+
+```JavaScript
+function emptyList() {
+    var toDoItems = toDoList.children;
+    while (toDoItems.length > 0) {
+        toDoItems.item(0).remove();
+    }
+}
+```
+--- /task ---

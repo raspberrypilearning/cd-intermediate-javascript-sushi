@@ -1,36 +1,41 @@
-## Wiring up buttons
+## Getting set up
 
-Before getting into the details of how your application is going to work, you should connect all the buttons up to “dummy” functions, to make testing them easier.  
+- Go to [the starter trinket](http://dojo.soy/js-i-start){:target="_blank"}. You will see a box containing an example website project. On the right-hand side is the website, and on the left-hand side is the code that makes the website.
+![Web page and code in Trinket](images/tktJSStartingPoint.png)
 
-From the *Beginner JavaScript Sushi Cards*, you will hopefully remember that a JavaScript **function** definition looks like this:
 
-```JavaScript
-  function newToDoItem(itemText, completed) {
-      alert("New item created: "+itemText+"  Completed state: "+completed);
-  }
-```
+--- collapse ---
+---
+title: I have a Trinket account
+---
 
-Almost all the **functions** you need are in the file already, though they don't do anything cool yet. They just send **alert messages** (pop-up boxes) telling you what **function** was called and what the values in the parameters were. Read through them to understand what's there. 
+- Click the **Remix** button at the top right of the project. If you are not signed in, you will be prompted to do so. Once you've signed in, you'll  need to click  **Remix** again. Clicking this button creates a copy of the project for you to work with. 
 
-+ There's one missing, that you need to add. Create a new function in `to-do.js` that:
-    1. Is called `toggleToDoItemState`
-    2. Accepts a parameter: `listItem`
-    3. When called, alerts the message `"Toggling state of item "+itemId`
+![Remix button](images/tktRemixButtonArrow.png)
 
-+ Now you need to tell JavaScript to **listen** for a **click** on the buttons, then do something. Each of the buttons on the page has a unique `id`. You can use that `id` to tell **JavaScript** what to listen to. Add the following code instead of the `alert` into the `runWhenPageLoads` function:
-```JavaScript
-    document.getElementById("add-button").addEventListener("click", addToDoItem)
-```
-  
-Because `runWhenPageLoads` is called at the end of the file, and the file is loaded at the end of the HTML page, `runWhenPageLoads` will, as you might guess, run once the page loads! This bit of code chains together a lot of functions with dots (`.`), where each function's is acting on the thing fetched by the function before it:
-  1. Look in the `document`—the whole page
-  2. Find the **element** (HTML tag) on that page that has “add-button” as its `id`
-  3. Tell JavaScript to **listen** for the **click** action on the button and then run the `addToDoItem` function whenever it “hears” the action  
+It should say **remixed** after you click it:
 
-+ Reload `index.html` and click the button that says “Add”. You should see an **alert** message pop up!
-  
-+ Do the same for the other two buttons:
-  * Connect `#clear-button` to `clearCompletedToDoItems`
-  * Connect `#empty-button` to `emptyList`
+![Button now says "remixed"](images/tktRemixedSmall.png)
 
-+ Don't forget to test them!
+--- /collapse ---
+
+--- collapse ---
+---
+title: I don't have a Trinket account
+---
+
+You can save your work by using one of the options in the **Share** menu. You will get a link that you can either save somewhere, for example in a document, or send to someone via email.
+**Note:** each time you make a change, you will get a new link.
+
+If you want to create an account on Trinket, follow the steps below. This will allow you to access your work easily from any computer, and to **remix** projects somebody else has shared with you. Remixing means you will save a copy of a project so you can make your own changes to it.
+
+- Go to [the Trinket website](http://dojo.soy/trinket) and click **Sign Up For Your Free Account**. You will need an email address to sign up. 
+
+- Enter your email address and choose a password, or ask somebody to do this for you.
+
+- You can now access all your saved or remixed projects by clicking on your username and going to **My Trinkets**.
+!["My Trinkets" menu item](images/MyTrinketsMenuWide.png)
+
+--- /collapse ---
+
+Let's start coding!

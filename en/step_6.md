@@ -1,27 +1,25 @@
 ## Completing items
+There's not much point in a todo list if you can't mark things off it! Time to add that!
 
-Now you can load your to-do list and add items to it, but what's the point if you can't check them off when you've done them? Next up, you're going to do just that, and it'll be pretty easy. 
+You've already setup the listener for a double click on each todo item. All you need to do is setup a function that will toggle between complete and not complete when that double click happens.
 
-+ First, you need to connect double-clicking on a list item (`li` tag) to your `toggleToDoItemState` function. You can do this by having JavaScript **listen** for double-clicking on `li` tags and running a function that calls your `toggleToDoItemState` function. It looks like this:
+Remember that you're using the `complete` class to mark items complete. Not having that class means they're not complete. All your function needs to do is add and remove the class from the item's **class list**, adding it if it's not there and removing it if it is. 
+
+### this
+The tricky bit is knowing *which* item to toggle the class on. You'll need to use a new JavaScript **keyword** to identify the item that was clicked: `this`. 
+
+The `this` keyword is a complicated part of JavaScript, but all you need to know for now is that, when used with a function called by an event listener, it means 'the element the listener was bound to'. So you can use `this` to identify the specific `<li>` that was clicked.
+
+--- task ---
+Add the `toggleToDoItemState` function to your script like so:
 
 ```JavaScript
-  document.getElementById("todo").addEventListener("dblclick",function(event){
-    if(event.target && event.target.matches("li")){
-      toggleToDoItemState(event.target)
+function toggleToDoItemState() {
+    if (this.classList.contains("completed")) {
+        this.classList.remove("completed");
+    } else {
+        this.classList.add("completed");
     }
-  })
+}
 ```
-
-What's happening here is:
-1. JavaScript is **listening** to all double-clicks that happen on the `todo` list
-2. If it “hears” one, it runs a **function**, into which it passes the details of the click `event`
-3. If the `event` had a `target` (a thing that was clicked on) and that `target` matches `"li"`, which is the HTML tag for a **list item** then:
-    4. Run `toggleToDoItemState` and pass it the `event.target` information
-
-+ Next, you need to update your `toggleToDoItemState` function so it adds the `completed` **class** (a HTML property—a **tag**, like `<li>` can have many **classes**) to the item that was double-clicked, which will put a line through it using some of my CSS code. Thankfully, in modern JavaScript, that's pretty simple! Just update this to `toggleToDoItemState`:
-
-```JavaScript
-  function toggleToDoItemState(target){
-    target.classList.toggle("completed")
-  }
-```
+--- /task ---

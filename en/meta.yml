@@ -17,8 +17,11 @@ last_tested: 2017-01-01
 steps: 
 - title: Introduction
 - title: Getting Setup
+- title: What you will need
 - title: Wiring up buttons
-- title: Creating a list
 - title: Adding to-dos
 - title: Completing items
-- title: Cleaning the list
+- title: Clearing the list
+- title: Saving the list
+- title: Loading the list
+- title: "Challenge: Automatic saving"

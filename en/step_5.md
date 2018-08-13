@@ -1,46 +1,92 @@
 ## Adding to-dos
+Time to get the first of those buttons working! This step will show you how to add a to-do item to the list.
 
-So, your to-do list works now, but it's always the same. You can fix that! The “Add” button already calls a **function**, you just need to make that **function** do something.
+### HTML Lists
+You're going to use a tiny bit of HTML in this step. The list is an **ordered list** — that means it's numbered. The HTML tag for an ordered list is `<ol>` and each individual **list item** is an `<li>` tag.
 
-+ Go to your `to-do.js` file and change the code in `addToDoItem` to get the text from the text field \(named “new-todo”\) and alert it to check you're getting it:
+### Adding list items
+ The page came with the `<ol>` so you just need to write some JavaScript to add `<li>` tags for each new todo item. The user should be able to enter text in the box on the page, click the 'Add' button and see it appear on the list as a numbered item.
 
-```JavaScript
-   itemText = document.getElementById("new-todo").value
-   alert("Item added: "+itemText)
-```
-
-+ Type something into the text field and click the "Add" button. You should see what you typed pop up in an **alert**.
-
-+ The next step is to get that text onto the to-do list. You'll need a **function** that gets the HTML for the new item and adds it to the end of the list. So, change the `newToDoItem` to have this code inside it:
+--- task ---
+First, just like you did with the buttons, create variables to select the text box and the list. They already have the ids `todo-entry-box` and `todo-list`.
 
 ```JavaScript
-   var newItem = {
-                "text": itemText,
-                "completed": completed
-            } // make parameters into a toDoItem
-   toDoItems.push(newItem); //use the push function: put newItem at the end of toDoItems
-   var toDoList = document.getElementById("todo")
-   var itemHTML = getToDoItemHTML(newItem)
-   toDoList.append(itemHTML)
+var toDoEntryBox = document.getElementById("todo-entry-box");
+var toDoList = document.getElementById("todo-list");
 ```
+--- /task ---
 
-+ Now, go back to `addToDoItem` and change it again, removing the **alert** and calling `newToDoItem` like this:
+--- task ---
+Now you can easily access the box and the list from inside your program.
+
+Create a function called `newToDoItem` to add an item to the list. This function will need to know two things:
+  - What is the text of the item?
+  - Should the item be marked complete?
+When adding a new todo it won't ever be complete, but this is planning ahead so you can use the same function again when you're loading a saved list!
 
 ```JavaScript
-    newToDoItem(itemText,false)
+function newToDoItem(itemText, completed) {
+    var toDoItem = document.createElement("li");
+    var toDoText = document.createTextNode(itemText);
+    toDoItem.appendChild(toDoText);
+
+    if (completed) {
+        toDoItem.classList.add("completed");
+    }
+
+    toDoList.appendChild(toDoItem);
+    toDoItem.addEventListener("dblclick", toggleToDoItemState);
+}
 ```
 
-### Don't repeat yourself!
+--- /task ---
 
-+ You can also use `newToDoItem` in `loadList` to reduce the amount of code you've got to manage. You can replace all the code in the **function** with this:
+Try adding a todo once you've filled it in!
+
+--- collapse ---
+
+---
+title: “[What is the function doing?]”
+---
+This new function does a few things:
+```JavaScript
+var toDoItem = document.createElement("li");
+```
+Creates an `li` element to use as your todo.
+```JavaScript
+var toDoText = document.createTextNode(itemText);
+```
+Creates a **text node** — a special container for text that you want to put inside a HTML element using JavaScript — and fills it with the contents of the `itemText` variable that is **passed** into the function.
+```JavaScript
+toDoItem.appendChild(toDoText);
+```
+The `appendChild` function you're using here takes the element, or text node, that you pass to it (in this case `toDoText`) and puts it inside `toDoItem`. If there are already elements inside that one, the one you're adding will be last.
+```JavaScript
+if (completed) {
+    toDoItem.classList.add("completed");
+}
+```
+This bit checks if the value for the `completed` variable that was passed to `newToDoItem` is `true`. If it is, then it will add the **class** 'completed' to the `li` element, which will change how it looks on the page; We included some special styling rules for `li` tags with the 'completed' class in `style.css` — check them out, change them if you like!
+```JavaScript
+toDoList.appendChild(toDoItem);
+```
+Just like before, here `appendChild` is putting `toDoItem` (the `<li>` element) inside of `toDoList` (the `<ol>` element).
+```JavaScript
+toDoItem.addEventListener("dblclick", toggleToDoItemState);
+```
+Finally, this is attaching an event listener for a **double-click** to the `toDoItem` and telling it to call a function called `toggleToDoItemState` when it's clicked. You'll be making that one in the next step!
+--- /collapse ---
+
+--- task ---
+Now, connect to the function to the add button, just change your `addToDoItem` function to get the text from the box and pass it to the `newToDoItem` function you've just created.
 
 ```JavaScript
-    newToDoItem("My",false)
-    newToDoItem("to-do",true)
-    newToDoItem("list",false)
+function addToDoItem() {
+    var itemText = toDoEntryBox.value;
+    newToDoItem(itemText, false);
+}
 ```
+Obviously a new todo is never complete, so you can always pass `false` to the `completed` parameter of the `newToDoItem` function.
+--- /task ---
 
-You've gone from 17 lines of code to 3, and that's the power of **functions**! Try to understand how this works and how it's doing the exact same job as the old version of `loadList` was.
-
-
-
+Now try adding a todo to the list!
