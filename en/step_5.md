@@ -46,7 +46,7 @@ Try adding a todo once you've filled it in!
 --- collapse ---
 
 ---
-title: “[What is the function doing?]”
+title: “What is the function doing?”
 ---
 This new function does a few things:
 ```JavaScript

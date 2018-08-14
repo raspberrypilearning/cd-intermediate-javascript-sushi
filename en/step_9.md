@@ -22,7 +22,7 @@ function loadList() {
 --- /task ---
 
 --- task ---
-Call the `loadList` funciton after you've created it.
+Call the `loadList` function after you've created it.
 ```JavaScript
 loadList();
 ```
