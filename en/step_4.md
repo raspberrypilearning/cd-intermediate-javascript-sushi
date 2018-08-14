@@ -14,7 +14,7 @@ If you look at the page, you'll see it has four buttons:
 
 Of course, since you haven't written your program yet, right now none of them work!
 
-Since you want to make the page *do* something, you need to click on the tab for `script.js` and add some code in there. These instructions will show you how to setup the 'Add' button and then you can do the others yourself.
+Since you want to make the page *do* something, you need to click on the tab for the `script.js` file and add some code in there. These instructions will show you how to setup the 'Add' button and then you can do the others yourself.
 
 JavaScript needs to be told which parts of the HTML page are important and what things that a user might do to them it should react to. In this case, you want to tell it about the 'Add' button and tell it to react when that button is clicked.
 
