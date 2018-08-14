@@ -1,6 +1,6 @@
 ## Introduction
 
-In these cards you're going to make the to-do list app. This app can be used to track whatever you want: cool programming tricks you want to learn, places to go, songs to listen to (or learn to play!), or something as simple as things to pick up at the shops.
+In these cards you're going to make the todo list app. This app can be used to track whatever you want: cool programming tricks you want to learn, places to go, songs to listen to (or learn to play!), or something as simple as things to pick up at the shops.
 
 ### What you will make
 
