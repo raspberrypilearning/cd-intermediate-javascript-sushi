@@ -55,8 +55,8 @@ function addToDoItem() {
 
 Now click the button and check if it works!
 
-### Connect the other buttons
-Now connect the other three buttons:
+### Write code for the other buttons
+Now connect the other three buttons so clicking them sends an alert:
 
 --- task ---
 Connect the **Clear Completed** button — which has the Id `clear-completed-button` — to an alerting function called `clearCompletedToDoItems`.
