@@ -18,7 +18,7 @@ function clearCompletedToDoItems() {
 ```
 --- /task ---
 
-Notice that you're always removing the item at position `0` in the list. This is because the list gets shorter every time the loop runs and removes an item. In this way, no matter how many completed items there are, it will eventually remove them all.
+You can see that the code always removes the item at list position `0`, the first item on the list. You need to use `0` to do this, because JavaScript starts counting at `0` and not `1`! You remove this item so that every time the loop runs, it removes the first item, so the list gets shorter and shorter. In this way, no matter how many completed items are on the list, the loop will eventually remove them all.
 
 ### Clearing everything
 --- task ---
