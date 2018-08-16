@@ -1,4 +1,4 @@
-## Loading the list
+## Load the saved list
 To load the list, you need to reverse everything you did to save it. But first, you need to check if there's anything to load. You do this by checking if the key you used to store the list doesn't have a `null` value. **'Null'** is just another word for 'empty', or 'nothing'.
 
 --- task ---
