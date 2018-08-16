@@ -1,4 +1,4 @@
-## Getting set up
+## Get set up
 
 - Go to [the starter trinket](http://dojo.soy/js-i-template){:target="_blank"}. You will see a box containing an example website project. On the right-hand side is the website, and on the left-hand side is the code that makes the website.
 ![Web page and code in Trinket](images/tktJSStartingPoint.png)
