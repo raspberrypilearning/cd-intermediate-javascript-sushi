@@ -21,7 +21,7 @@ steps:
 - title: Add action to your buttons
 - title: Add to-do items
 - title: Completing items
-- title: Clear the list
+- title: Remove items
 - title: Save the list
 - title: Load a saved list
 - title: "Challenge: automatic saving"
