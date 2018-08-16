@@ -22,7 +22,8 @@ Now you can easily access the box and the list from inside your program.
 Create a function called `newToDoItem` to add an item to the list. This function will need to know two things:
   - What is the text of the item?
   - Should the item be marked as completed?
-Of course, no new to-do item would ever be complete, but this is planning ahead: you'll be able to use the same function again when you're loading a saved list!
+
+Of course, no new to-do item would ever be complete, but you're planning ahead here: you'll be able to use the same function again when you're loading a saved list that has some completed items on it!
 
 ```JavaScript
 function newToDoItem(itemText, completed) {
