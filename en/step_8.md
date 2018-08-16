@@ -28,7 +28,7 @@ var toDoInfo = {
 };
 ```
 
-Once you've converted all the to-do items into objects, you just need to save them to local storage. Local storage can only store strings, but luckily JavaScript can **stringify** an array for you!
+Once you've converted all the to-do items into objects, you just need to save them to local storage. Local storage can only store strings, but luckily JavaScript turns arrays into strings for you if you use the `stringify` function!
 
 Time to try it all out!
 
@@ -37,7 +37,7 @@ Time to try it all out!
 Update the `saveList` function to:
   - Make an array
   - Use a `for` loop to put every item in `toDoList` into the array as an object 
-  - Stringify the array and store it in local storage with the **key** `toDos`
+  - `stringify` the array and store it in local storage with the **key** `toDos`
 
 ```JavaScript
 function saveList() {
