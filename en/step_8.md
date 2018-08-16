@@ -6,7 +6,7 @@ There are two parts to this: saving the list and, if it's there, loading it agai
 This gets a bit tricky: local storage can't store HTML, so you need to take the HTML code and turn it into pure JavaScript. To do this, you'll need an **array**.
 
 ### Arrays
-An array is a special kind of variable that's a list of variables. You can create one with square brackets `[]`, and add items to it with the `push` method. You can look at a specific array item using `alert` and the item's **position** in the array. Note that JavaScript starts counting at `0`!
+An array is a special kind of variable that's a list of variables. You can create one with square brackets `[]`, and add items to it with the `push` method. You can remind yourself what a specific array item is using `alert` and the item's **position** in the array. Note that JavaScript starts counting at `0`!
 
 ```JavaScript
 var myArray = [];
