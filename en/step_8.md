@@ -1,4 +1,4 @@
-## Saving the list
+## Save the list
 To make your to-do list even more useful, you can save it to the **local storage** on the user's computer. Then, as long as they open it in the same browser the next time, it will remember their to-do list!
 
 There are two parts to this: saving the list and, if it's there, loading it again when the page is reloaded.
