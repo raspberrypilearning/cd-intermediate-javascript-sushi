@@ -1,9 +1,9 @@
 --- challenge ---
 
-## Challenge: Automatic saving
+## Challenge: automatic saving
 
-Change your app so that instead of having to click the save button users' changes to their list are automatically saved.
+Change the code of your app so that, instead of the user having to click the **Save** button, their changes to the list are automatically saved.
 
-You won't need to create any new functions to do this, but you will need to change a lot of the ones you already have!
+You won't need to create any new functions to do this, but you will need to change several you already have!
 
 --- /challenge ---

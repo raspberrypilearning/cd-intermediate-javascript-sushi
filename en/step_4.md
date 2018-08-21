@@ -1,50 +1,50 @@
-## Wiring up buttons
+## Add action to your buttons
 
-The code you've got to start off with includes three files:
-  - `index.html` — a HTML file that tells the page what should be on it.
+The code you've got includes three files, which you can see as tabs in the trinket window:
+  - `index.html` — a HTML file that tells the page what should be on it
   - `style.css` — a CSS file that tells the page what it should look like: where things should be, what size and colour they should be, etc.
-  - `script.js` — a JavaScript file that tells the page what to do. You'll be doing most of your coding in this file.
+  - `script.js` — a JavaScript file that tells the page what to do; you'll be doing most of your coding in this file
 
 If you look at the page, you'll see it has four buttons:
 
-  - An 'Add' button for adding new to-dos
-  - A 'Clear Completed' button for clearing to-dos that you've marked as finished
-  - An 'Empty List' button for completely emptying the to-do list
-  - A 'Save List' button for saving what's on the list
+  - An **Add** button for adding new to-do items
+  - A **Clear Completed** button for clearing items that you've marked as finished
+  - An **Empty List** button for completely emptying the to-do list
+  - A **Save List** button for saving what's on the list
 
-Of course, since you haven't written your program yet, right now none of them work!
+Of course, since you haven't written any code yet, right now none of them do anything!
 
-Since you want to make the page *do* something, you need to click on the tab for the `script.js` file and add some code in there. These instructions will show you how to setup the 'Add' button and then you can do the others yourself.
+Since you want to make the page **do** something, you need to click on the tab for the `script.js` file and add some code in there. These instructions will show you how to set up the **Add** button, and then you can set up the others by yourself.
 
-JavaScript needs to be told which parts of the HTML page are important and what things that a user might do to them it should react to. In this case, you want to tell it about the 'Add' button and tell it to react when that button is clicked.
+JavaScript needs to be told which parts of the HTML page are important, and which interactions of a user with these parts it should react to. In this case, you want to tell it about the **Add** button, and tell it to react when the user clicks this button.
 
 ### Getting the button
 --- task ---
-Start by making a variable for the button and telling JavaScript to get the **element** from the HTML **document** that has the **id** `add-button`. 
+Start by making a variable for the button and telling JavaScript to get the **element** from the HTML **document** that has the **Id** `add-button`. 
 
 ```JavaScript
 var addButton = document.getElementById("add-button");
 ```
 --- /task ---
 
-An id is a unique label for a part of a web page and when we made the starter page we gave one to each of the buttons. You can see them if you look at `index.html`.
+An Id is a unique label for a part of a web page, and when we created the starter page, we gave a label to each of the buttons. You can see them if you look at `index.html`.
 
 ### Listening for the click
 --- task ---
-Next connect your button to a listener, so JavaScript will 'listen' for a particular kind of event and then run a function when it 'hears' it. In this case, the event is a click. Do this with the `addEventListener` function, like this:
+Now connect your button to a **event listener**, so JavaScript will 'listen' for a particular kind of event and then run a function when it 'hears' it. In this case, the event is a click. Do this with the `addEventListener` function, like this:
 
 ```JavaScript
 addButton.addEventListener("click", addToDoItem);
 ```
 --- /task ---
 
-This listener will 'listen' for a click on `addButton` and will then run the `addToDoItem` function when it 'hears' the click. Of course, it won't work right now since you haven't written an `addToDoItem` function yet!
+This listener will wait for a click on `addButton`, and when it 'hears' the click, it will react by running the `addToDoItem` function. Of course, it won't work just yet, since you haven't written an `addToDoItem` function yet!
 
 ### Creating the function
-Later in the project you'll be making functions that create todo items, clear the list, save it, etc. For now though, you just want to check that you've conencted your listeners properly. 
+Later in the project you'll be writing code for your functions so that they add to-do items, clear the list, save it, etc. But for now, you just want to check that you've connected your event listeners properly. 
 
 --- task ---
-Make a function that will pop an alert to the user telling them which button they clicked.
+Create your `addToDoItem` function so that it will pop up an alert message telling the user which button they've clicked.
 
 ```JavaScript
 function addToDoItem() {
@@ -55,32 +55,32 @@ function addToDoItem() {
 
 Now click the button and check if it works!
 
-### Connect the other buttons
-Now connect the other three buttons:
+### Write code for the other buttons
+Now connect the other three buttons so clicking them sends an alert:
 
 --- task ---
-Connect the 'Clear Completed' button — which has the id `clear-completed-button` — to an alerting function called `clearCompletedToDoItems`.
+Connect the **Clear Completed** button — which has the Id `clear-completed-button` — to an alerting function called `clearCompletedToDoItems`.
 --- /task ---
 
 --- task ---
-Connect the 'Empty List' button — which has the id `empty-button` — to an alerting function called `emptyList`.
+Connect the **Empty List** button — which has the Id `empty-button` — to an alerting function called `emptyList`.
 --- /task ---
 
 --- task ---
-Connect the 'Empty List' button — which has the id `save-button` — to an alerting function called `saveList`.
+Connect the **Empty List** button — which has the Id `save-button` — to an alerting function called `saveList`.
 --- /task ---
 
 --- hints ---
 --- hint ---
 For each of the buttons you need to:
 
-  - Create a **varaiable** and get the button in the HTML **document** using its **id**
-  - Add an **event listener** to the **varaible**, listening for the **click event** and calling the appropriately named **function** when it hears it
-  - Create the appropriate **function** (e.g. `clearCompletedToDoItems`) and code it to **alert** the user, telling them which button has been clicked
+  - Create a variable and get the button using its Id in the HTML file
+  - Add an event listener to the variable that listens for the click event and, upon hearing it, calls an appropriately named function
+  - Create the appropriate function (e.g. `clearCompletedToDoItems`) and code it to alert the user about which button they've clicked
 
 --- /hint ---
 --- hint ---
-Here you can see the code you need to add, below the code you've already written:
+The code below the `addButton` section is what you need to add:
 
 ```JavaScript
 var addButton = document.getElementById("add-button");

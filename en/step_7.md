@@ -1,11 +1,11 @@
-## Clearing the list
-Once you've marked items completed, you want a way to remove all those completed items from the list. Also, if you come back to your list after a long time, or just want to work on something totally new, you might want to clear everything off it. To do this you just need to update two functions you've already connected to buttons: `clearCompletedToDoItems` and `emptyList`.
+## Remove items
+Once you've marked items as complete, you'll want a way to remove all those completed items. Also, if you come back to your list after a long time, or if you just want to work on something totally new, you might want to clear out everything on it. To do this, you just need to update two functions you've already connected to buttons: `clearCompletedToDoItems` and `emptyList`.
 
 ### Clearing completed items
-Just like you can select all the elements in a HTML document, you can select the elements *inside* any other element. Elements inside another element are called the **children** of that element. Likewise, just like you can select them by id, you can select them by class too.
+Just like you can select all the elements in an HTML document, you can select the elements **inside** any other element. Elements inside another element are called the **children** of that element. Likewise, just like you can select elements by Id, you can select them by class too.
 
 --- task ---
-In order to clear completed items, update `clearCompletedToDoItems` to select items inside `toDoList` by the `completed` class and then loop through them and remove them. 
+In order to clear completed items, update the `clearCompletedToDoItems` function with code to select the children of `toDoList` (the items inside it) that have the `completed` class. Then **loop** over the selected items to remove them one by one. 
 
 ```JavaScript
 function clearCompletedToDoItems() {
@@ -18,11 +18,11 @@ function clearCompletedToDoItems() {
 ```
 --- /task ---
 
-Notice that you're always removing the item at position `0` in the list. This is because the list gets shorter every time you remove an item and this way you'll eventually remove them all!
+You can see that the code always removes the item at list position `0`, the first item on the list. You need to use `0` to do this, because JavaScript starts counting at `0` and not `1`! You remove this item so that every time the loop runs, it removes the first item, so the list gets shorter and shorter. In this way, no matter how many completed items are on the list, the loop will eventually remove them all.
 
 ### Clearing everything
 --- task ---
-To clear everything on the list, do the same thing as above, but select *all* the children of `toDoList`.
+To clear everything off the list, do the same thing as above, but select **all** the children of `toDoList`.
 
 ```JavaScript
 function emptyList() {
