@@ -1,113 +1,103 @@
-## Add action to your buttons
+## Add to-do items
+Time to get the first of those buttons working properly! This step will show you how to make it add a to-do item to the list.
 
-The code you've got includes three files, which you can see as tabs in the trinket window:
-  - `index.html` — a HTML file that tells the page what should be on it
-  - `style.css` — a CSS file that tells the page what it should look like: where things should be, what size and colour they should be, etc.
-  - `script.js` — a JavaScript file that tells the page what to do; you'll be doing most of your coding in this file
+### HTML lists
+You're going to use a tiny bit of HTML in this step. The list is an **ordered list** — that means it's numbered. The HTML tag for an ordered list is `<ol>`, and each individual **list item** needs an `<li>` tag.
 
-If you look at the page, you'll see it has four buttons:
+### Adding list items
+The page came with the `<ol>` ordered list, so you just need to write some JavaScript to add `<li>` tags for each new to-do item. The user should be able to enter text in the box on the page, and then click the **Add** button to see it appear on the list as a numbered item.
 
-  - An **Add** button for adding new to-do items
-  - A **Clear Completed** button for clearing items that you've marked as finished
-  - An **Empty List** button for completely emptying the to-do list
-  - A **Save List** button for saving what's on the list
-
-Of course, since you haven't written any code yet, right now none of them do anything!
-
-Since you want to make the page **do** something, you need to click on the tab for the `script.js` file and add some code in there. These instructions will show you how to set up the **Add** button, and then you can set up the others by yourself.
-
-JavaScript needs to be told which parts of the HTML page are important, and which interactions of a user with these parts it should react to. In this case, you want to tell it about the **Add** button, and tell it to react when the user clicks this button.
-
-### Getting the button
 --- task ---
-Start by making a variable for the button and telling JavaScript to get the **element** from the HTML **document** that has the **Id** `add-button`. 
+First, just like you did with the buttons, create variables to select the text box and the list. They already have the Ids `todo-entry-box` and `todo-list`.
 
 ```JavaScript
-var addButton = document.getElementById("add-button");
+var toDoEntryBox = document.getElementById("todo-entry-box");
+var toDoList = document.getElementById("todo-list");
 ```
 --- /task ---
 
-An Id is a unique label for a part of a web page, and when we created the starter page, we gave a label to each of the buttons. You can see them if you look at `index.html`.
-
-### Listening for the click
 --- task ---
-Now connect your button to a **event listener**, so JavaScript will 'listen' for a particular kind of event and then run a function when it 'hears' it. In this case, the event is a click. Do this with the `addEventListener` function, like this:
+Now you can easily access the box and the list from inside your program.
+
+Create a function called `newToDoItem` to add an item to the list. This function will need to know two things:
+  - What is the text of the item?
+  - Should the item be marked as completed?
+
+Of course, no new to-do item would ever be complete, but you're planning ahead here: you'll be able to use the same function again when you're loading a saved list that has some completed items on it!
 
 ```JavaScript
-addButton.addEventListener("click", addToDoItem);
+function newToDoItem(itemText, completed) {
+    var toDoItem = document.createElement("li");
+    var toDoText = document.createTextNode(itemText);
+    toDoItem.appendChild(toDoText);
+
+    if (completed) {
+        toDoItem.classList.add("completed");
+    }
+
+    toDoList.appendChild(toDoItem);
+    toDoItem.addEventListener("dblclick", toggleToDoItemState);
+}
 ```
+
 --- /task ---
 
-This listener will wait for a click on `addButton`, and when it 'hears' the click, it will react by running the `addToDoItem` function. Of course, it won't work just yet, since you haven't written an `addToDoItem` function yet!
+--- collapse ---
 
-### Creating the function
-Later in the project you'll be writing code for your functions so that they add to-do items, clear the list, save it, etc. But for now, you just want to check that you've connected your event listeners properly. 
+---
+title: “What is the function doing?”
+---
+This new function does a few things.
+
+This bit of code:
+```JavaScript
+var toDoItem = document.createElement("li");
+```
+creates an `li` element to use as your new list item.
+
+This bit of code:
+```JavaScript
+var toDoText = document.createTextNode(itemText);
+```
+creates a **text node** — a special container for text that you want to put inside a HTML element using JavaScript — and fills it with the contents of the `itemText` variable that is **passed** into the function.
+
+The `appendChild` function you're using here:
+```JavaScript
+toDoItem.appendChild(toDoText);
+```
+takes the element, or text node, that you pass to it (in this case `toDoText`), and puts it inside `toDoItem`. If there are already elements inside that one, the one you're adding now will be last.
+
+This bit:
+```JavaScript
+if (completed) {
+    toDoItem.classList.add("completed");
+}
+```
+checks if the value for the `completed` variable that was passed to `newToDoItem` is `true`. If it is, then it will add the **class** `completed` to the `li` element, which will change how it looks on the page. In `style.css`, there are special styling rules for `li` tags with the `completed` class in `style.css` — check them out, and change them if you like!
+
+Just like before, here `appendChild` :
+```JavaScript
+toDoList.appendChild(toDoItem);
+```
+puts `toDoItem` (the `<li>` element) inside of `toDoList` (the `<ol>` element).
+
+Finally, this line of code:
+```JavaScript
+toDoItem.addEventListener("dblclick", toggleToDoItemState);
+```
+attaches an event listener for a **double-click** to the `toDoItem`, and tells it to call a function named `toggleToDoItemState` in response. You'll be creating that function with the next card!
+--- /collapse ---
 
 --- task ---
-Create your `addToDoItem` function so that it will pop up an alert message telling the user which button they've clicked.
+Now, connect to the function to the **Add** button: just change your `addToDoItem` function to get the text from the box and pass it to the `newToDoItem` function you've just created.
 
 ```JavaScript
 function addToDoItem() {
-  alert("Add button clicked!");
+    var itemText = toDoEntryBox.value;
+    newToDoItem(itemText, false);
 }
 ```
+Since a new to-do item is never complete, you can always pass `false` to the `completed` parameter of the `newToDoItem` function.
 --- /task ---
 
-Now click the button and check if it works!
-
-### Write code for the other buttons
-Now connect the other three buttons so clicking them sends an alert:
-
---- task ---
-Connect the **Clear Completed** button — which has the Id `clear-completed-button` — to an alerting function called `clearCompletedToDoItems`.
---- /task ---
-
---- task ---
-Connect the **Empty List** button — which has the Id `empty-button` — to an alerting function called `emptyList`.
---- /task ---
-
---- task ---
-Connect the **Empty List** button — which has the Id `save-button` — to an alerting function called `saveList`.
---- /task ---
-
---- hints ---
---- hint ---
-For each of the buttons you need to:
-
-  - Create a variable and get the button using its Id in the HTML file
-  - Add an event listener to the variable that listens for the click event and, upon hearing it, calls an appropriately named function
-  - Create the appropriate function (e.g. `clearCompletedToDoItems`) and code it to alert the user about which button they've clicked
-
---- /hint ---
---- hint ---
-The code below the `addButton` section is what you need to add:
-
-```JavaScript
-var addButton = document.getElementById("add-button");
-addButton.addEventListener("click", addToDoItem);
-function addToDoItem() {
-    alert("Add button clicked!");
-}
-
-var clearButton = document.getElementById("clear-completed-button");
-clearButton.addEventListener("click", clearCompletedToDoItems);
-function clearCompletedToDoItems() {
-    alert("Clear button clicked!");
-}
-
-
-var emptyButton = document.getElementById("empty-button");
-emptyButton.addEventListener("click", emptyList);
-function emptyList() {
-    alert("Empty button clicked!");
-}
-
-
-var saveButton = document.getElementById("save-button");
-saveButton.addEventListener("click", saveList);
-function saveList() {
-    alert("Save button clicked!");
-}
-```
---- /hint ---
---- /hints ---
+Now try adding a to-do to the list!
