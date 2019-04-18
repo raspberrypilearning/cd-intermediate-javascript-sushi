@@ -12,10 +12,30 @@ This is an example of the app you'll be making:
 
 You can add and remove to-do items from the list, and also save them so they reload for you later.
 
-### What you will learn
+--- collapse ---
+---
+title: What you will learn
+---
 
   - Using an online editor to create and modify JavaScript
   - Creating your own JavaScript functions
   - Listening for different user actions on a web page
   - Using functions together to write code more professionally
   - Saving user information between visits to your web page
+
+--- /collapse ---
+
+--- collapse ---
+---
+title: What you will need
+---
+
+### Hardware
+
++ A computer capable of accessing [trinket.io](https://trinket.io){:target="_blank"}
+
+### Software
+
+This project can be completed in a web browser using [trinket.io](https://trinket.io){:target="_blank"}.
+
+--- /collapse ---

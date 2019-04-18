@@ -16,7 +16,6 @@ version: 3
 last_tested: 2017-01-01
 steps: 
 - title: Introduction
-- title: What you will need
 - title: Get set up
 - title: Add action to your buttons
 - title: Add to-do items
