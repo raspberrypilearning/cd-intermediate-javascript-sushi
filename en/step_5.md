@@ -11,6 +11,7 @@ The trick is knowing on which item to toggle the class. To identify the item tha
 How exactly the `this` keyword works is a bit complicated, but all you need to know here is that, when it's used with a function called by an event listener, it means 'the element the listener was bound to'. So you can use `this` to identify the specific `<li>` item that was clicked!
 
 --- task ---
+
 Add the `toggleToDoItemState` function to your script like so:
 
 ```JavaScript
@@ -22,4 +23,5 @@ function toggleToDoItemState() {
     }
 }
 ```
+
 --- /task ---

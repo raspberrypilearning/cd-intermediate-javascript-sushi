@@ -33,7 +33,9 @@ Once you've converted all the to-do items into objects, you just need to save th
 Time to try it all out!
 
 ### Putting it all together
+
 --- task ---
+
 Update the `saveList` function to:
   - Make an array
   - Use a `for` loop to put every item in `toDoList` into the array as an object 
@@ -58,4 +60,5 @@ function saveList() {
     localStorage.setItem("toDos", JSON.stringify(toDos));
 }
 ```
+
 --- /task ---
