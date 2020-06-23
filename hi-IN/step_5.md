@@ -6,9 +6,9 @@
 याद रखें कि आप `complete` का उपयोग कर रहे हैं आइटम को पूर्ण के रूप में चिह्नित करने के लिए। उस क्लास के न होने का अर्थ है कि वे पूर्ण नहीं हैं। इसलिए आपके फ़ंक्शन को आइटम की **class list** से क्लास जोड़ना या हटाना होगा, या तो इसे जोड़ना अगर यह अभी तक सूची में नहीं है, और यदि है तो इसे हटा दें।
 
 ### The this keyword
-The trick is knowing on which item to toggle the class. To identify the item that was clicked, you'll need to use a new JavaScript **keyword**: `this`.
+जल्दी से करने के लिए आपको पता होना चाहिए कि किस आइटम पर क्लास (class) टॉगल (toggle) करना है | क्लिक किए गए आइटम की पहचान करने के लिए, आपको एक नया JavaScript **संकेत शब्द** का उपयोग करना होगा : ` this` ।
 
-How exactly the `this` keyword works is a bit complicated, but all you need to know here is that, when it's used with a function called by an event listener, it means 'the element the listener was bound to'. तो आप विशिष्ट `<li>` आइटम जो क्लिक किया गया था की पहचान करने के लिए `this` का उपयोग कर सकते हैं!
+`this` कीवर्ड का वास्तव में काम थोड़ा जटिल है, लेकिन आप सभी को यहां यह जानना आवश्यक है कि, जब इसका उपयोग किसी इवेंट लिस्टनेर द्वारा कहे जाने वाले फ़ंक्शन के साथ किया जाता है, तो इसका अर्थ है 'वह तत्व जो लिस्टनेर के लिए बाध्य था'। तो आप विशिष्ट `<li>` आइटम जो क्लिक किया गया था की पहचान करने के लिए `this` का उपयोग कर सकते हैं!
 
 --- task ---
 
