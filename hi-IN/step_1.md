@@ -14,28 +14,28 @@
 
 --- collapse ---
 ---
-title: आप क्या सीखेंगे
+title: What you will learn
 ---
 
-  - JavaScript बनाने और संशोधित करने के लिए एक ऑनलाइन एडीटर (editor) का उपयोग करना
-  - अपने स्वयं के JavaScript फंक्शन (functions) बनाना
-  - एक वेब पेज पर विभिन्न उपभोक्ता एक्शन को सुनना
-  - अधिक पेशेवर तरीके से कोड लिखने के लिए एक साथ फ़ंक्शन (functions) का उपयोग करना
-  - अपने वेब पेज पर जाने के बीच उपयोगकर्ता की जानकारी सहेजना
+  - Using an online editor to create and modify JavaScript
+  - Creating your own JavaScript functions
+  - Listening for different user actions on a web page
+  - Using functions together to write code more professionally
+  - Saving user information between visits to your web page
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: आपको किन चीज़ों की आवश्यकता होगी
+title: What you will need
 ---
 
-### हार्डवेयर
+### Hardware
 
-+ एक कंप्यूटर जो [trinket.io](https://trinket.io){:target="_blank"} वेबसाइट को खोलने में सक्षम हो |
++ A computer capable of accessing [trinket.io](https://trinket.io){:target="_blank"}
 
-### सॉफ्टवेयर
+### Software
 
-इस प्रोजेक्ट को [trinket.io](https://trinket.io){:target="_blank"} का उपयोग करके किसी वेब ब्राउज़र में पूरा किया जा सकता है।
+This project can be completed in a web browser using [trinket.io](https://trinket.io){:target="_blank"}.
 
 --- /collapse ---
