@@ -1,12 +1,12 @@
-## Load the saved list
-To load the list, you need to reverse everything you did to save it. But first, you need to check if there's anything to load. You do this by checking if the key you used to store the list doesn't have a `null` value. **'Null'** is just another word for 'empty', or 'nothing'.
+## सहेजी गई सूची लोड करें
+सूची को लोड करने के लिए, आपको इसे सहेजने के लिए आपके द्वारा किए गए हर चीज को उल्टा करना होगा। लेकिन पहले, आपको जांचने की ज़रूरत है कि क्या लोड करने के लिए कुछ है। आप यह जाँच करते हैं कि सूची को सहेजने के लिए उपयोग होने वाली कुंजी (key) कही `null` तो नहीं है | **'Null' ** 'खाली', या 'कुछ नहीं' के लिए समानार्थक शब्द है।
 
 --- task ---
 
-Create a `loadList` function and have it:
-  - Check if the `toDos` key exists in local storage
-  - If it does, load it into a variable as an array
-  - Loop over the array, and use `newToDoItem` to create new to-do items for everything in it
+एक ` loadList ` फंक्शन बनाएं और इससे:
+  - जांचें कि `toDos` कुंजी (key) लोकल स्टोरेज में मौजूद है या नहीं
+  - यदि ऐसा होता है, तो इसे एक वेरिएबल के रूप में एक ऐरे (array) में लोड करें
+  - ऐरे पर लूप करें, और ` newToDoItem` का उपयोग करें ताकि इसमें सब कुछ करने के लिए नए टू-डू आइटम बनाए
 
 ```JavaScript
 function loadList() {
@@ -25,7 +25,7 @@ function loadList() {
 
 --- task ---
 
-Call the `loadList` function after you've created it.
+` loadList` फंक्शन को बनाने के बाद इसे कॉल करें ।
 
 ```JavaScript
 loadList();
@@ -33,8 +33,8 @@ loadList();
 
 --- /task --- --- challenge ---
 
-## Challenge: example to-do items
+## चुनौती: उदाहरण के लिए टू-डू आइटम्स
 
-See if you can make the `loadList` function create some example to-do items if there aren't any saved.
+देखें कि क्या आप ` loadList` फंक्शन से उदाहरण के टू-डू आइटम बना सकते हैं यदि कोई सहेजे नहीं थे।
 
 --- /challenge ---
