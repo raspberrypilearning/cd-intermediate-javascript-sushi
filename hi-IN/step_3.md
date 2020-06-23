@@ -3,26 +3,26 @@
 आपके द्वारा प्राप्त कोड में तीन फाइलें शामिल हैं, जिन्हें आप trinket विंडो में टैब के रूप में देख सकते हैं:
   - ` index.html ` - एक HTML फ़ाइल जो पेज को बताती है कि उस पर क्या होना चाहिए
   - ` style.css ` - एक CSS फ़ाइल जो पेज को बताती है कि उसे कैसा दिखना चाहिए: कहाँ चीजें होनी चाहिए, उनका आकार और रंग कैसा होना चाहिए, आदि।
-  - `script.js` — a JavaScript file that tells the page what to do; you'll be doing most of your coding in this file
+  - ` script.js ` - एक JavaScript फ़ाइल जो पेज को बताती है कि क्या करना है; आप इस फ़ाइल में अपनी अधिकांश कोडिंग करेंगे
 
-If you look at the page, you'll see it has four buttons:
+यदि आप पेज देखते हैं, तो आप देखेंगे कि इसमें चार बटन हैं:
 
-  - An **Add** button for adding new to-do items
-  - A **Clear Completed** button for clearing items that you've marked as finished
-  - An **Empty List** button for completely emptying the to-do list
-  - A **Save List** button for saving what's on the list
+  - नए टू-डू आइटम जोड़ने के लिए एक ** Add ** बटन
+  - एक ** Clear Completed ** बटन आइटम को साफ़ करने के लिए जिसे आपने पूर्ण के रूप में चिह्नित किया है
+  - पूरी तरह से टू-डू सूची खाली करने के लिए एक ** Empty List ** बटन
+  - सूची में क्या है इसे सहेजने के लिए एक ** Save List ** बटन
 
-Of course, since you haven't written any code yet, right now none of them do anything!
+बेशक, चूंकि आपने अभी तक कोई कोड नहीं लिखा है, अभी उनमें से कोई भी कुछ भी नहीं करता है!
 
-Since you want to make the page **do** something, you need to click on the tab for the `script.js` file and add some code in there. These instructions will show you how to set up the **Add** button, and then you can set up the others by yourself.
+चूंकि आप पेज से कुछ **काम करवाना** चाहते है , आपको ` script.js ` फ़ाइल के लिए टैब पर क्लिक करने की आवश्यकता है और वहाँ कुछ कोड जोड़ें। ये निर्देश आपको दिखाएंगे कि **Add** बटन कैसे सेट करें, और फिर आप दूसरों को खुद से सेट कर सकते हैं।
 
-JavaScript needs to be told which parts of the HTML page are important, and which interactions of a user with these parts it should react to. In this case, you want to tell it about the **Add** button, and tell it to react when the user clicks this button.
+JavaScript को यह बताने की आवश्यकता है कि HTML पेज के कौन से हिस्से महत्वपूर्ण हैं, और इन भागों के साथ उपयोगकर्ता के कौन से इंटरैक्शन पर प्रतिक्रिया करनी चाहिए। इस मामले में, आप इसे **Add** बटन के बारे में बताना चाहते हैं , और जब उपयोगकर्ता इस बटन पर क्लिक करता है तो प्रतिक्रिया करने के लिए कहें।
 
-### Getting the button
+### बटन प्राप्त करना
 
 --- task ---
 
-Start by making a variable for the button and telling JavaScript to get the **element** from the HTML **document** that has the **Id** `add-button`.
+बटन के लिए वेरिएबल बनाकर शुरू करें और JavaScript को HTML **डॉक्यूमेंट ** से ** element** प्राप्त करने के लिए  बताएं  जिसमे **Id** `add-button` है ।
 
 ```JavaScript
 var addButton = document.getElementById("add-button");
@@ -30,13 +30,13 @@ var addButton = document.getElementById("add-button");
 
 --- /task ---
 
-An Id is a unique label for a part of a web page, and when we created the starter page, we gave a label to each of the buttons. You can see them if you look at `index.html`.
+एक Id एक वेब पेज के एक हिस्से के लिए एक अनूठा लेबल है, और जब हमने स्टार्टर पेज बनाया, तो हमने प्रत्येक बटन को एक लेबल दिया। यदि आप ` index.html` देखें, तो आप उन्हें देख सकते हैं ।
 
 ### Listening for the click
 
 --- task ---
 
-Now connect your button to a **event listener**, so JavaScript will 'listen' for a particular kind of event and then run a function when it 'hears' it. In this case, the event is a click. Do this with the `addEventListener` function, like this:
+Now connect your button to a **event listener**, so JavaScript will 'listen' for a particular kind of event and then run a function when it 'hears' it. इस स्थिति में, ईवेंट एक क्लिक है। इसे ` addEventListener` फंक्शन के साथ करें, कुछ इस तरह:
 
 ```JavaScript
 addButton.addEventListener("click", addToDoItem);
@@ -44,14 +44,14 @@ addButton.addEventListener("click", addToDoItem);
 
 --- /task ---
 
-This listener will wait for a click on `addButton`, and when it 'hears' the click, it will react by running the `addToDoItem` function. Of course, it won't work just yet, since you haven't written an `addToDoItem` function yet!
+` addButton ` पर यह लिस्टनेर एक क्लिक का इंतजार करेगा , और जब यह क्लिक को 'सुनेगा', तो यह ` addToDoItem ` को चलाकर प्रतिक्रिया करेगा। बेशक, यह अभी तक काम नहीं करेगा, क्योंकि आपने ` addToDoItem` फंक्शन नहीं लिखा है!
 
-### Creating the function
-Later in the project you'll be writing code for your functions so that they add to-do items, clear the list, save it, etc. But for now, you just want to check that you've connected your event listeners properly.
+### फंक्शन बनाना
+बाद में प्रोजैक्ट में आप अपने फंक्शन के लिए कोड लिखेंगे ताकि वे टू-डू आइटम जोड़ें, सूची साफ़ करें, इसे सहेजें आदि। लेकिन अभी के लिए, आप केवल यह देखना चाहते हैं कि आपने अपने ईवेंट लिस्टनेर को ठीक से जोड़ा है।
 
 --- task ---
 
-Create your `addToDoItem` function so that it will pop up an alert message telling the user which button they've clicked.
+अपना ` addToDoItem` फंक्शन बनाएँ ताकि यह अलर्ट संदेश को पॉपअप करके उपयोगकर्ता को बताए कि उन्होंने किस बटन को क्लिक किया है।
 
 ```JavaScript
 function addToDoItem() {
@@ -61,40 +61,40 @@ function addToDoItem() {
 
 --- /task ---
 
-Now click the button and check if it works!
+अब बटन पर क्लिक करें और जांचें कि क्या यह काम करता है!
 
-### Write code for the other buttons
-Now connect the other three buttons so clicking them sends an alert:
+### अन्य बटनों के लिए कोड लिखें
+अब अन्य तीन बटन जोड़े ताकि उन्हें क्लिक करने से अलर्ट भेजा जा सके:
 
 --- task ---
 
-Connect the **Clear Completed** button — which has the Id `clear-completed-button` — to an alerting function called `clearCompletedToDoItems`.
+**Clear Completed** बटन - जिसमें Id `clear-completed-button` है - को एक ` clearCompletedToDoItems ` नामित चेतावनी फंक्शन से कनेक्ट करें।
 
 --- /task ---
 
 --- task ---
 
-Connect the **Empty List** button — which has the Id `empty-button` — to an alerting function called `emptyList`.
+**Empty List** बटन - जिसमें Id `empty-button` है - को एक `emptyList` नामित चेतावनी फंक्शन से कनेक्ट करें।
 
 --- /task ---
 
 --- task ---
 
-Connect the **Empty List** button — which has the Id `save-button` — to an alerting function called `saveList`.
+**Empty List** बटन - जिसमें Id `save-button` है - को एक `saveList` नामित चेतावनी फंक्शन से कनेक्ट करें।
 
 --- /task ---
 
 --- hints --- --- hint ---
 
-For each of the buttons you need to:
+प्रत्येक बटन के लिए आप को जरूरत है की आप:
 
-  - Create a variable and get the button using its Id in the HTML file
-  - Add an event listener to the variable that listens for the click event and, upon hearing it, calls an appropriately named function
-  - Create the appropriate function (e.g. `clearCompletedToDoItems`) and code it to alert the user about which button they've clicked
+  - एक वैरिएबल बनाएं और HTML फ़ाइल में इसके Id का उपयोग करके बटन प्राप्त करें
+  - क्लिक ईवेंट (click event) के लिए सुनने वाले वैरिएबल में एक ईवेंट लिस्टनेर (event listener) जोड़ें और, इसे सुनने पर, उचित रूप से नामित फ़ंक्शन को कॉल करें
+  - उपयुक्त फ़ंक्शन बनाएं (उदाहरण ` clearCompletedToDoItems `) और उपयोगकर्ता को यह सूचित करने के लिए कोड करें कि उन्होंने किस बटन पर क्लिक किया है
 
 --- /hint --- --- hint ---
 
-The code below the `addButton` section is what you need to add:
+` addButton ` भाग के नीचे कोड है जिसे आपको जोड़ने की आवश्यकता है:
 
 ```JavaScript
 var addButton = document.getElementById("add-button");
