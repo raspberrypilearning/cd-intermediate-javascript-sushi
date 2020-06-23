@@ -6,7 +6,7 @@
 यह थोड़ा मुश्किल हो जाता है: लोकल स्टोरेज HTML को स्टोर नहीं कर सकता है, इसलिए आपको HTML कोड को शुद्ध JavaScript में बदलने की आवश्यकता है। ऐसा करने के लिए, आपको ** ऐरे (array) ** की आवश्यकता होगी ।
 
 ### ऐरे (Arrays)
-एक ऐरे (array) एक विशेष प्रकार का वेरिएबल है जो की वेरिएबल की एक सूची है। आप वर्ग कोष्ठक (ब्रैकेट) ` [] ` के साथ एक ऐरे बना सकते हैं, और `push` तरीका (method) के साथ इसमें आइटम जोड़ें । You can remind yourself what a specific array item is using `alert` and the item's **position** in the array. Remember that JavaScript starts counting at `0`!
+एक ऐरे (array) एक विशेष प्रकार का वेरिएबल है जो की वेरिएबल की एक सूची है। आप वर्ग कोष्ठक (ब्रैकेट) ` [] ` के साथ एक ऐरे बना सकते हैं, और `push` तरीका (method) के साथ इसमें आइटम जोड़ें । You can remind yourself what a specific array item is using `alert` and the item's **position** in the array. याद रखें कि JavaScript ` 0` पर गिनना शुरू करता है!
 
 ```JavaScript
 var myArray = [];
@@ -18,7 +18,7 @@ alert(myArray[0]);
 
 Next, you need to **loop** over the `toDoList` list and add each item to the array. Remember that you need to store not just the task, but also whether or not it's completed. The best way to do this is using JavaScript **objects**.
 
-### JavaScript objects
+### JavaScript ऑब्जेक्ट्स (objects)
 An object is set of **properties** and **values**. आप इस तरह एक बनाएँ:
 
 ```JavaScript
@@ -28,7 +28,7 @@ var toDoInfo = {
 };
 ```
 
-Once you've converted all the to-do items into objects, you just need to save them to local storage. Local storage can only store strings, but luckily JavaScript turns arrays into strings for you if you use the `stringify` function!
+एक बार जब आप सभी टू-डू आइटम्स को ऑब्जेक्ट (object) में परिवर्तित कर लेते हैं, तो आपको बस उन्हें लोकल स्टोरेज में सहेजने की आवश्यकता होती है। Local storage can only store strings, but luckily JavaScript turns arrays into strings for you if you use the `stringify` function!
 
 Time to try it all out!
 
@@ -36,10 +36,10 @@ Time to try it all out!
 
 --- task ---
 
-Update the `saveList` function to:
-  - Make an array
-  - Use a `for` loop to put every item in `toDoList` into the array as an object
-  - `stringify` the array and store it in local storage with the **key** `toDos`
+` saveList` फंक्शन को अपडेट करना:
+  - एक ऐरे (array) बनाये
+  - `for` लूप का उपयोग करके सभी `toDoList` के आइटम्स को ऐरे (array) में ऑब्जेक्ट (object) बनाकर रखे
+  - ऐरे (array) को `stringify` करे और इसे लोकल स्टोरेज में **key** `toDos` का उपयोग करके रखे
 
 ```JavaScript
 function saveList() {
