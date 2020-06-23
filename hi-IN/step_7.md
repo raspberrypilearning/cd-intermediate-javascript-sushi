@@ -19,7 +19,7 @@ alert(myArray[0]);
 Next, you need to **loop** over the `toDoList` list and add each item to the array. Remember that you need to store not just the task, but also whether or not it's completed. The best way to do this is using JavaScript **objects**.
 
 ### JavaScript objects
-An object is set of **properties** and **values**. You create one like this:
+An object is set of **properties** and **values**. आप इस तरह एक बनाएँ:
 
 ```JavaScript
 var toDoInfo = {
