@@ -1,6 +1,6 @@
-## Introduction
+## परिचय
 
-With these cards you're going to make a to-do list web app. You'll be able to use this app to track whatever you want: cool programming tricks you want to learn, places to go, songs to listen to (or learn to play!), or just something as simple as things to pick up at the shops.
+इन कार्डों के मदद से आप एक टू-डू सूची वेब ऐप बनाने जा रहे हैं। You'll be able to use this app to track whatever you want: cool programming tricks you want to learn, places to go, songs to listen to (or learn to play!), or just something as simple as things to pick up at the shops.
 
 ### What you will make
 
