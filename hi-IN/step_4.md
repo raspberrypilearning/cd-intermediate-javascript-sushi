@@ -1,15 +1,15 @@
 ## टू-डू आइटम्स जोड़ें
-Time to get the first of those buttons working properly! This step will show you how to make it add a to-do item to the list.
+Time to get the first of those buttons working properly! यह चरण आपको यह दिखाएगा कि सूची में एक टू-डू आइटम कैसे जोड़ा जाए।
 
 ### HTML सूचियाँ
-You're going to use a tiny bit of HTML in this step. The list is an **ordered list** — that means it's numbered. The HTML tag for an ordered list is `<ol>`, and each individual **list item** needs an `<li>` tag.
+आप इस चरण में थोड़े से HTML का उपयोग करने जा रहे हैं। सूची एक ** आदेशित सूची ** है - इसका मतलब है कि यह संख्यांकित है। एक आदेशित सूची के लिए HTML टैग `<ol>` है, और प्रत्येक व्यक्तिगत ** सूची आइटम ** को एक `<li>` टैग की जरूरत है।
 
-### Adding list items
+### सूची आइटम जोड़ना
 The page came with the `<ol>` ordered list, so you just need to write some JavaScript to add `<li>` tags for each new to-do item. The user should be able to enter text in the box on the page, and then click the **Add** button to see it appear on the list as a numbered item.
 
 --- task ---
 
-First, just like you did with the buttons, create variables to select the text box and the list. They already have the Ids `todo-entry-box` and `todo-list`.
+First, just like you did with the buttons, create variables to select the text box and the list. उनके पास पहले से ही ` todo-entry-box ` और ` todo-list ` Id है ।
 
 ```JavaScript
 var toDoEntryBox = document.getElementById("todo-entry-box");
@@ -20,11 +20,11 @@ var toDoList = document.getElementById("todo-list");
 
 --- task ---
 
-Now you can easily access the box and the list from inside your program.
+अब आप अपने प्रोग्राम के अंदर से बॉक्स और सूची को आसानी से देख सकते हैं।
 
-Create a function called `newToDoItem` to add an item to the list. This function will need to know two things:
-  - What is the text of the item?
-  - Should the item be marked as completed?
+एक ` newToDoItem` नामित फ़ंक्शन बनाएं जिससे सूची में आइटम जोड़ा जा सके। इस फ़ंक्शन को दो बातें जानने की आवश्यकता होगी:
+  - आइटम का टेक्स्ट (text) क्या है?
+  - क्या आइटम को पूर्ण के रूप में चिह्नित किया जाना चाहिए?
 
 Of course, no new to-do item would ever be complete, but you're planning ahead here: you'll be able to use the same function again when you're loading a saved list that has some completed items on it!
 
@@ -47,20 +47,20 @@ function newToDoItem(itemText, completed) {
 
 --- collapse ---
 ---
-title: “What is the function doing?”
+title: "फंक्शन क्या कार्य कर रहा है?"
 ---
 
-This new function does a few things.
+यह नया फंक्शन कुछ चीजें करता है।
 
-This bit of code:
+कोड का यह टुकड़ा:
 
 ```JavaScript
 var toDoItem = document.createElement("li");
 ```
 
-creates an `li` element to use as your new list item.
+एक ` li` एलिमेंट बनाता है जिसे अपने नए सूची आइटम के रूप में उपयोग करे ।
 
-This bit of code:
+कोड का यह टुकड़ा:
 
 ```JavaScript
 var toDoText = document.createTextNode(itemText);
@@ -68,15 +68,15 @@ var toDoText = document.createTextNode(itemText);
 
 creates a **text node** — a special container for text that you want to put inside a HTML element using JavaScript — and fills it with the contents of the `itemText` variable that is **passed** into the function.
 
-The `appendChild` function you're using here:
+` appendChild` फंक्शन आप यहाँ उपयोग कर रहे हैं:
 
 ```JavaScript
 toDoItem.appendChild(toDoText);
 ```
 
-takes the element, or text node, that you pass to it (in this case `toDoText`), and puts it inside `toDoItem`. If there are already elements inside that one, the one you're adding now will be last.
+takes the element, or text node, that you pass to it (in this case `toDoText`), and puts it inside `toDoItem`. यदि पहले से ही उस के अंदर एलिमेंट हैं, तो आप जो अभी जोड़ रहे हैं वह अंतिम होगा।
 
-This bit:
+यह टुकड़ा:
 
 ```JavaScript
 if (completed) {
@@ -86,21 +86,21 @@ if (completed) {
 
 checks if the value for the `completed` variable that was passed to `newToDoItem` is `true`. If it is, then it will add the **class** `completed` to the `li` element, which will change how it looks on the page. In `style.css`, there are special styling rules for `li` tags with the `completed` class in `style.css` — check them out, and change them if you like!
 
-Just like before, here `appendChild`:
+पहले की तरह, यहाँ `appendChild`:
 
 ```JavaScript
 toDoList.appendChild(toDoItem);
 ```
 
-puts `toDoItem` (the `<li>` element) inside of `toDoList` (the `<ol>` element).
+यह ` toDoItem`(`<li>` एलिमेंट) को ` toDoList` के अंदर डालता है (`<ol>` एलिमेंट)।
 
-Finally, this line of code:
+अंत में, कोड की यह पंक्ति:
 
 ```JavaScript
 toDoItem.addEventListener("dblclick", toggleToDoItemState);
 ```
 
-attaches an event listener for a **double-click** to the `toDoItem`, and tells it to call a function named `toggleToDoItemState` in response. You'll be creating that function with the next card!
+attaches an event listener for a **double-click** to the `toDoItem`, and tells it to call a function named `toggleToDoItemState` in response. आप अगले कार्ड के साथ उस फंक्शन को बनाएँगे !
 
 --- /collapse ---
 
@@ -115,8 +115,8 @@ function addToDoItem() {
 }
 ```
 
-Since a new to-do item is never complete, you can always pass `false` to the `completed` parameter of the `newToDoItem` function.
+चूंकि एक नया टू-डू आइटम कभी पूरा नहीं होता है, आप हमेशा `completed` पैरामीटर में ` false` पास कर सकते हैं जो `newToDoItem` फंक्शन में हैं ।
 
 --- /task ---
 
-Now try adding a to-do to the list!
+अब सूची में एक टू-डू कार्य जोड़ने की कोशिश करो!
