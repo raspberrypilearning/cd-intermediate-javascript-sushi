@@ -1,12 +1,12 @@
 ## चीज़ें हटाए
-एक बार जब आप आइटम को पूर्ण के रूप में चिह्नित कर लेते हैं, तो आप उन सभी पूर्ण आइटम को हटाने का एक तरीका चाहते हैं। Also, if you come back to your list after a long time, or if you just want to work on something totally new, you might want to clear out everything on it. To do this, you just need to update two functions you've already connected to buttons: `clearCompletedToDoItems` and `emptyList`.
+एक बार जब आप आइटम को पूर्ण के रूप में चिह्नित कर लेते हैं, तो आप उन सभी पूर्ण आइटम को हटाने का एक तरीका चाहते हैं। इसके अलावा, यदि आप लंबे समय के बाद अपनी सूची में वापस आते हैं, या यदि आप अभी कुछ पूरी तरह से नया काम करना चाहते हैं, तो आप वहां से सबकुछ साफ करना चाहेंगे । ऐसा करने के लिए, आपको केवल उन दो फ़ंक्शंस को अपडेट करना होगा जिन्हें आप पहले से ही बटन से जोड़ चुके हैं: ` clearCompletedToDoItems ` और ` emptyList ` ।
 
 ### पूर्ण चिह्नित आइटम्स हटाएं
-Just like you can select all the elements in an HTML document, you can select the elements **inside** any other element. Elements inside another element are called the **children** of that element. Likewise, just like you can select elements by Id, you can select them by class too.
+जैसे आप HTML डॉक्यूमेंट में सभी एलिमेंट्स का चयन कर सकते हैं, वैसे ही आप किसी भी अन्य एलिमेंट्स के **अंदर** से एलिमेंट्स का चयन कर सकते हैं। किसी अन्य एलिमेंट के अंदर मौजूद एलिमेंट को उस एलिमेंट का ** चिल्ड्रन** कहा जाता है । इसी तरह, जैसे आप Id के आधार पर एलिमेंट का चयन कर सकते हैं, वैसे ही आप उन्हें क्लास से भी चुन सकते हैं।
 
 --- task ---
 
-In order to clear completed items, update the `clearCompletedToDoItems` function with code to select the children of `toDoList` (the items inside it) that have the `completed` class. Then **loop** over the selected items to remove them one by one.
+पूर्ण आइटम हटाने के लिए, ` clearCompletedToDoItems` फंक्शन के कोड को ` toDoList ` के चिल्ड्रन का चयन कर सकने वाले कोड (इसके अंदर के आइटम) जिनके क्लास ` पूर्ण (completed)` हैं से अपडेट (update) करें। फिर एक-एक आइटम्स पर ** लूप ** करे ताकि उन्हें निकालने के लिए चयनित कर सके ।
 
 ```JavaScript
 function clearCompletedToDoItems() {
@@ -20,13 +20,13 @@ function clearCompletedToDoItems() {
 
 --- /task ---
 
-You can see that the code always removes the item at list position `0`, the first item on the list. You need to use `0` to do this, because JavaScript starts counting at `0` and not `1`! You remove this item so that every time the loop runs, it removes the first item, so the list gets shorter and shorter. In this way, no matter how many completed items are on the list, the loop will eventually remove them all.
+आप देख सकते हैं कि कोड हमेशा सूची स्थिति ` 0 ` पर आइटम को हटा देता है , जो सूची में पहला आइटम है। ऐसा करने के लिए आपको ` 0` का उपयोग करने की आवश्यकता है , क्योंकि JavaScript की गिनती ` 0` पर शुरू होती है, न की `1` पर ! आप इस आइटम को हटाते हैं ताकि हर बार लूप चलने पर, यह पहला आइटम हटा दे, इसलिए सूची हर बार और छोटी हो जाती है। इस तरह, सूची में कितने भी पूर्ण आइटम हो, लूप अंत में उन सभी को हटा देगा।
 
-### Clearing everything
+### सब कुछ साफ करे
 
 --- task ---
 
-To clear everything off the list, do the same thing as above, but select **all** the children of `toDoList`.
+सूची से सबकुछ खाली करने के लिए, ऊपर जैसा कार्य करें, लेकिन `toDoList` के अधीन **सब चीजों** का चयन करें ।
 
 ```JavaScript
 function emptyList() {
