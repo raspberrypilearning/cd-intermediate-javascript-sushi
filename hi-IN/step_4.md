@@ -1,7 +1,7 @@
-## Add to-do items
+## टू-डू आइटम्स जोड़ें
 Time to get the first of those buttons working properly! This step will show you how to make it add a to-do item to the list.
 
-### HTML lists
+### HTML सूचियाँ
 You're going to use a tiny bit of HTML in this step. The list is an **ordered list** — that means it's numbered. The HTML tag for an ordered list is `<ol>`, and each individual **list item** needs an `<li>` tag.
 
 ### Adding list items
