@@ -1,8 +1,8 @@
-## Add action to your buttons
+## अपने बटनों में एक्शन जोड़ें
 
-The code you've got includes three files, which you can see as tabs in the trinket window:
-  - `index.html` — a HTML file that tells the page what should be on it
-  - `style.css` — a CSS file that tells the page what it should look like: where things should be, what size and colour they should be, etc.
+आपके द्वारा प्राप्त कोड में तीन फाइलें शामिल हैं, जिन्हें आप trinket विंडो में टैब के रूप में देख सकते हैं:
+  - ` index.html ` - एक HTML फ़ाइल जो पेज को बताती है कि उस पर क्या होना चाहिए
+  - ` style.css ` - एक CSS फ़ाइल जो पेज को बताती है कि उसे कैसा दिखना चाहिए: कहाँ चीजें होनी चाहिए, उनका आकार और रंग कैसा होना चाहिए, आदि।
   - `script.js` — a JavaScript file that tells the page what to do; you'll be doing most of your coding in this file
 
 If you look at the page, you'll see it has four buttons:
