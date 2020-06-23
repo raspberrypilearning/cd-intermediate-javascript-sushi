@@ -1,41 +1,41 @@
 ## परिचय
 
-इन कार्डों के मदद से आप एक टू-डू सूची वेब ऐप बनाने जा रहे हैं। You'll be able to use this app to track whatever you want: cool programming tricks you want to learn, places to go, songs to listen to (or learn to play!), or just something as simple as things to pick up at the shops.
+इन कार्डों के मदद से आप एक टू-डू सूची वेब ऐप बनाने जा रहे हैं। आप जो भी चाहते हैं उसे ट्रैक करने के लिए इस ऐप का उपयोग कर पाएंगे: विभिन्न प्रोग्रामिंग के तरीके जिसे आप सीखना चाहते हैं, स्थानों पर जाने के लिए, गाने सुनने के लिए (या गाना गाने सीखें!), या बस सरल चीजे जैसे की दुकानें से सामान लेना।
 
-### What you will make
+### आप क्या बनाएँगे
 
-This is an example of the app you'll be making:
+यह आपके द्वारा बनाए जाने वाले ऐप का एक उदाहरण है:
 
 <div class="app-preview">
   <iframe allowtransparency="true" width="450px" height="450px" src="https://philipharney.github.io/to-do-list/" frameborder="0"></iframe>
 </div>
 
-You can add and remove to-do items from the list, and also save them so they reload for you later.
+आप टू-डू सूची से आइटम जोड़ सकते हैं और निकाल सकते हैं, और उन्हें सहेज भी सकते हैं ताकि वे बाद में आपके लिए पुनः लोड हो जाएं।
 
 --- collapse ---
 ---
-title: What you will learn
+title: आप क्या सीखेंगे
 ---
 
-  - Using an online editor to create and modify JavaScript
-  - Creating your own JavaScript functions
-  - Listening for different user actions on a web page
-  - Using functions together to write code more professionally
-  - Saving user information between visits to your web page
+  - JavaScript बनाने और संशोधित करने के लिए एक ऑनलाइन एडीटर (editor) का उपयोग करना
+  - अपने स्वयं के JavaScript फंक्शन (functions) बनाना
+  - एक वेब पेज पर विभिन्न उपभोक्ता एक्शन को सुनना
+  - अधिक पेशेवर तरीके से कोड लिखने के लिए एक साथ फ़ंक्शन (functions) का उपयोग करना
+  - अपने वेब पेज पर जाने के बीच उपयोगकर्ता की जानकारी सहेजना
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: What you will need
+title: आपको किन चीज़ों की आवश्यकता होगी
 ---
 
-### Hardware
+### हार्डवेयर
 
-+ A computer capable of accessing [trinket.io](https://trinket.io){:target="_blank"}
++ एक कंप्यूटर जो [trinket.io](https://trinket.io){:target="_blank"} वेबसाइट को खोलने में सक्षम हो |
 
-### Software
+### सॉफ्टवेयर
 
-This project can be completed in a web browser using [trinket.io](https://trinket.io){:target="_blank"}.
+इस प्रोजेक्ट को [trinket.io](https://trinket.io){:target="_blank"} का उपयोग करके किसी वेब ब्राउज़र में पूरा किया जा सकता है।
 
 --- /collapse ---
