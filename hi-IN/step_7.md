@@ -1,12 +1,12 @@
-## Save the list
-To make your to-do list even more useful, you can save it to the **local storage** on the user's computer. Then, as long as they open it in the same browser the next time, it will remember their to-do list!
+## सूची को सहेजें
+अपनी टू-डू सूची को और अधिक उपयोगी बनाने के लिए, आप इसे उपयोगकर्ता के कंप्यूटर पर ** लोकल स्टोरेज (storage) ** में सहेज सकते हैं । फिर, जब तक वे उसी ब्राउज़र में इसे खोलते हैं, यह उनकी टू-डू सूची को याद रखेगा!
 
-There are two parts to this: saving the list and, if it's there, loading it again when the page is reloaded.
+इसके दो हिस्से हैं: सूची को सहेजना और, यदि यह वहां है, तो पेज को फिर से लोड किए जाने पर इसे फिर से लोड करना।
 
-This gets a bit tricky: local storage can't store HTML, so you need to take the HTML code and turn it into pure JavaScript. To do this, you'll need an **array**.
+यह थोड़ा मुश्किल हो जाता है: लोकल स्टोरेज HTML को स्टोर नहीं कर सकता है, इसलिए आपको HTML कोड को शुद्ध JavaScript में बदलने की आवश्यकता है। ऐसा करने के लिए, आपको ** ऐरे (array) ** की आवश्यकता होगी ।
 
-### Arrays
-An array is a special kind of variable that's a list of variables. You can create one with square brackets `[]`, and add items to it with the `push` method. You can remind yourself what a specific array item is using `alert` and the item's **position** in the array. Remember that JavaScript starts counting at `0`!
+### ऐरे (Arrays)
+एक ऐरे (array) एक विशेष प्रकार का वेरिएबल है जो की वेरिएबल की एक सूची है। आप वर्ग कोष्ठक (ब्रैकेट) ` [] ` के साथ एक ऐरे बना सकते हैं, और `push` तरीका (method) के साथ इसमें आइटम जोड़ें । You can remind yourself what a specific array item is using `alert` and the item's **position** in the array. Remember that JavaScript starts counting at `0`!
 
 ```JavaScript
 var myArray = [];
