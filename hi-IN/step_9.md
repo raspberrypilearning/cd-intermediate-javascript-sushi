@@ -1,9 +1,9 @@
 --- challenge ---
 
-## Challenge: automatic saving
+## चुनौती: स्वचालित (automatic) सहेजना
 
-Change the code of your app so that, instead of the user having to click the **Save** button, their changes to the list are automatically saved.
+अपने ऐप का कोड बदलें ताकि उपयोगकर्ता के **Save** बटन पर क्लिक करने के बजाय , सूची में उनके परिवर्तन ऑटोमैटिक रूप से सहेजे जा सके।
 
-You won't need to create any new functions to do this, but you will need to change several you already have!
+ऐसा करने के लिए आपको कोई नया फंक्शन बनाने की आवश्यकता नहीं होगी, लेकिन आपको पहले से ही मौजूद फंक्शन्स में कुछ परिवर्तन करने होंगे!
 
 --- /challenge ---
