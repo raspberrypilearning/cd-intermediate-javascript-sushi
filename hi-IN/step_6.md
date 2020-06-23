@@ -1,7 +1,7 @@
-## Remove items
-Once you've marked items as complete, you'll want a way to remove all those completed items. Also, if you come back to your list after a long time, or if you just want to work on something totally new, you might want to clear out everything on it. To do this, you just need to update two functions you've already connected to buttons: `clearCompletedToDoItems` and `emptyList`.
+## चीज़ें हटाए
+एक बार जब आप आइटम को पूर्ण के रूप में चिह्नित कर लेते हैं, तो आप उन सभी पूर्ण आइटम को हटाने का एक तरीका चाहते हैं। Also, if you come back to your list after a long time, or if you just want to work on something totally new, you might want to clear out everything on it. To do this, you just need to update two functions you've already connected to buttons: `clearCompletedToDoItems` and `emptyList`.
 
-### Clearing completed items
+### पूर्ण चिह्नित आइटम्स हटाएं
 Just like you can select all the elements in an HTML document, you can select the elements **inside** any other element. Elements inside another element are called the **children** of that element. Likewise, just like you can select elements by Id, you can select them by class too.
 
 --- task ---
