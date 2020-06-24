@@ -16,10 +16,10 @@ alert(myArray[0]);
 //This will alert "something to store"
 ```
 
-Next, you need to **loop** over the `toDoList` list and add each item to the array. Remember that you need to store not just the task, but also whether or not it's completed. The best way to do this is using JavaScript **objects**.
+अगला, आपको ` toDoList ` सूची पर ** लूप** करने की आवश्यकता है और ऐरे में प्रत्येक आइटम जोड़ें। याद रखें कि आपको न केवल कार्य को संग्रहीत करने की आवश्यकता है, बल्कि यह भी कि यह पूरा हुआ है या नहीं। इसका सबसे अच्छा तरीका JavaScript ** ऑब्जेक्ट्स (objects)** का उपयोग करना है ।
 
 ### JavaScript ऑब्जेक्ट्स (objects)
-An object is set of **properties** and **values**. आप इस तरह एक बनाएँ:
+एक ऑब्जेक्ट ** गुणों (properties) ** और ** मान (values)** से निर्धारित होती है । आप इस तरह एक बनाएँ:
 
 ```JavaScript
 var toDoInfo = {
@@ -28,7 +28,7 @@ var toDoInfo = {
 };
 ```
 
-एक बार जब आप सभी टू-डू आइटम्स को ऑब्जेक्ट (object) में परिवर्तित कर लेते हैं, तो आपको बस उन्हें लोकल स्टोरेज में सहेजने की आवश्यकता होती है। Local storage can only store strings, but luckily JavaScript turns arrays into strings for you if you use the `stringify` function!
+एक बार जब आप सभी टू-डू आइटम्स को ऑब्जेक्ट (object) में परिवर्तित कर लेते हैं, तो आपको बस उन्हें लोकल स्टोरेज में सहेजने की आवश्यकता होती है। लोकल स्टोरेज केवल स्ट्रिंग्स (strings) को संग्रहीत कर सकता है, लेकिन सौभाग्य से JavaScript आपके लिए ऐरे को स्ट्रिंग्स में बदल देता है यदि आप ` stringify` फंक्शन का उपयोग करते हैं!
 
 Time to try it all out!
 
