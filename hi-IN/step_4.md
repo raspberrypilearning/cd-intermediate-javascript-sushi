@@ -5,11 +5,11 @@ Time to get the first of those buttons working properly! यह चरण आप
 आप इस चरण में थोड़े से HTML का उपयोग करने जा रहे हैं। सूची एक ** आदेशित सूची ** है - इसका मतलब है कि यह संख्यांकित है। एक आदेशित सूची के लिए HTML टैग `<ol>` है, और प्रत्येक व्यक्तिगत ** सूची आइटम ** को एक `<li>` टैग की जरूरत है।
 
 ### सूची आइटम जोड़ना
-पेज `<ol>` ऑर्डर की गई सूची के साथ आया था, इसलिए आपको बस प्रत्येक नए टू-डू आइटम के लिए `<li>` टैग जोड़ने के लिए कुछ JavaScript लिखने की आवश्यकता है। उपयोगकर्ता को पृष्ठ पर बॉक्स में पाठ दर्ज करने में सक्षम होना चाहिए, और फिर ** Add** बटन पर क्लिक करने से यह सूची पर एक गिने आइटम के रूप में दिखाई देता है।
+पेज `<ol>` ऑर्डर की गई सूची के साथ आया था, इसलिए आपको बस प्रत्येक नए टू-डू आइटम के लिए `<li>` टैग जोड़ने के लिए कुछ JavaScript लिखने की आवश्यकता है। उपयोगकर्ता को पेज पर बॉक्स में टेक्स्ट (text) दर्ज करने में सक्षम होना चाहिए, और फिर ** Add** बटन पर क्लिक करने से यह सूची पर एक गिने आइटम के रूप में दिखाई देता है।
 
 --- task ---
 
-सबसे पहले, जैसे आपने बटनों के साथ किया, पाठ बॉक्स और सूची का चयन करने के लिए वैरिएबल बनाएं। उनके पास पहले से ही ` todo-entry-box ` और ` todo-list ` Id है ।
+सबसे पहले, जैसे आपने बटनों के साथ किया, टेक्स्ट बॉक्स (text box) और सूची का चयन करने के लिए वैरिएबल बनाएं। उनके पास पहले से ही ` todo-entry-box ` और ` todo-list ` Id है ।
 
 ```JavaScript
 var toDoEntryBox = document.getElementById("todo-entry-box");
@@ -66,7 +66,7 @@ var toDoItem = document.createElement("li");
 var toDoText = document.createTextNode(itemText);
 ```
 
-creates a **text node** — a special container for text that you want to put inside a HTML element using JavaScript — and fills it with the contents of the `itemText` variable that is **passed** into the function.
+एक **text node** बनाता है - टेक्स्ट (text) के लिए एक विशेष कंटेनर जिसे आप JavaScript का उपयोग करके एक HTML एलिमेंट के अंदर रखना चाहते हैं - और इसे `itemText` वेरिएबल की सामग्री से भरता है जो फंक्शन को **पास (pass)** किया जाता है ।
 
 ` appendChild` फंक्शन आप यहाँ उपयोग कर रहे हैं:
 
@@ -74,7 +74,7 @@ creates a **text node** — a special container for text that you want to put in
 toDoItem.appendChild(toDoText);
 ```
 
-takes the element, or text node, that you pass to it (in this case `toDoText`), and puts it inside `toDoItem`. यदि पहले से ही उस के अंदर एलिमेंट हैं, तो आप जो अभी जोड़ रहे हैं वह अंतिम होगा।
+एलिमेंट, या टेक्स्ट नोड (text node) लेता है, जो आप इसे पास करते हैं (इस मामले में ` toDoText ` ), और इसे ` toDoItem ` के अंदर डालता है । यदि पहले से ही उस के अंदर एलिमेंट हैं, तो आप जो अभी जोड़ रहे हैं वह अंतिम होगा।
 
 यह टुकड़ा:
 
