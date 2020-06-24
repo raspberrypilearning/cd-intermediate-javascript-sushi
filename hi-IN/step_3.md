@@ -36,7 +36,7 @@ var addButton = document.getElementById("add-button");
 
 --- task ---
 
-Now connect your button to a **event listener**, so JavaScript will 'listen' for a particular kind of event and then run a function when it 'hears' it. इस स्थिति में, ईवेंट एक क्लिक है। इसे ` addEventListener` फंक्शन के साथ करें, कुछ इस तरह:
+अब अपने बटन को ** ईवेंट लिस्टनेर (event listener)** से जोड़िये, जिससे की JavaScript एक विशेष प्रकार के ईवेंट के लिए 'सुनेगा' और तब एक फ़ंक्शन चलाएगा जब वह इसे 'सुनेगा'। इस स्थिति में, ईवेंट एक क्लिक है। इसे ` addEventListener` फंक्शन के साथ करें, कुछ इस तरह:
 
 ```JavaScript
 addButton.addEventListener("click", addToDoItem);
