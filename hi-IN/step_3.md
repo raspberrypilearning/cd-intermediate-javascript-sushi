@@ -32,7 +32,7 @@ var addButton = document.getElementById("add-button");
 
 एक Id एक वेब पेज के एक हिस्से के लिए एक अनूठा लेबल है, और जब हमने स्टार्टर पेज बनाया, तो हमने प्रत्येक बटन को एक लेबल दिया। यदि आप ` index.html` देखें, तो आप उन्हें देख सकते हैं ।
 
-### Listening for the click
+### लिसनिंग फॉर द क्लिक (Listening for the click)
 
 --- task ---
 
