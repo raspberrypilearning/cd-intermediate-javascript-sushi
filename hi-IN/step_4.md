@@ -5,11 +5,11 @@ Time to get the first of those buttons working properly! यह चरण आप
 आप इस चरण में थोड़े से HTML का उपयोग करने जा रहे हैं। सूची एक ** आदेशित सूची ** है - इसका मतलब है कि यह संख्यांकित है। एक आदेशित सूची के लिए HTML टैग `<ol>` है, और प्रत्येक व्यक्तिगत ** सूची आइटम ** को एक `<li>` टैग की जरूरत है।
 
 ### सूची आइटम जोड़ना
-The page came with the `<ol>` ordered list, so you just need to write some JavaScript to add `<li>` tags for each new to-do item. The user should be able to enter text in the box on the page, and then click the **Add** button to see it appear on the list as a numbered item.
+पेज `<ol>` ऑर्डर की गई सूची के साथ आया था, इसलिए आपको बस प्रत्येक नए टू-डू आइटम के लिए `<li>` टैग जोड़ने के लिए कुछ JavaScript लिखने की आवश्यकता है। उपयोगकर्ता को पृष्ठ पर बॉक्स में पाठ दर्ज करने में सक्षम होना चाहिए, और फिर ** Add** बटन पर क्लिक करने से यह सूची पर एक गिने आइटम के रूप में दिखाई देता है।
 
 --- task ---
 
-First, just like you did with the buttons, create variables to select the text box and the list. उनके पास पहले से ही ` todo-entry-box ` और ` todo-list ` Id है ।
+सबसे पहले, जैसे आपने बटनों के साथ किया, पाठ बॉक्स और सूची का चयन करने के लिए वैरिएबल बनाएं। उनके पास पहले से ही ` todo-entry-box ` और ` todo-list ` Id है ।
 
 ```JavaScript
 var toDoEntryBox = document.getElementById("todo-entry-box");
@@ -26,7 +26,7 @@ var toDoList = document.getElementById("todo-list");
   - आइटम का टेक्स्ट (text) क्या है?
   - क्या आइटम को पूर्ण के रूप में चिह्नित किया जाना चाहिए?
 
-Of course, no new to-do item would ever be complete, but you're planning ahead here: you'll be able to use the same function again when you're loading a saved list that has some completed items on it!
+बेशक, कोई नया टू-डू आइटम कभी पूरा नहीं होगा, लेकिन आप यहां आगे की योजना बना रहे हैं: जब आप उस पर कुछ पूर्ण किए गए आइटम सहेजे गए सूची को लोड कर रहे हैं, तो आप फिर से उसी फ़ंक्शन का उपयोग कर पाएंगे!
 
 ```JavaScript
 function newToDoItem(itemText, completed) {
@@ -84,7 +84,7 @@ if (completed) {
 }
 ```
 
-checks if the value for the `completed` variable that was passed to `newToDoItem` is `true`. If it is, then it will add the **class** `completed` to the `li` element, which will change how it looks on the page. In `style.css`, there are special styling rules for `li` tags with the `completed` class in `style.css` — check them out, and change them if you like!
+जाँच करता है कि `completed` वेरिएबल का मूल्य जो हमने `newToDoItem` में दिए था, क्या वो `true` है। यदि यह **true** है, तो यह <0>class</0> `completed` को `li` एलिमेंट से जोड़ देगा, जो पेज पर कैसा दिखता है, इसे बदल देगा। ` style.css` में , ` li` टैग के लिए विशेष स्टाइल नियम हैं जो ` completed` क्लास के साथ ` style.css ` में आता है - उन्हें जाँच करें, और यदि आप चाहे तो बदल भी सकते है!
 
 पहले की तरह, यहाँ `appendChild`:
 
@@ -100,13 +100,13 @@ toDoList.appendChild(toDoItem);
 toDoItem.addEventListener("dblclick", toggleToDoItemState);
 ```
 
-attaches an event listener for a **double-click** to the `toDoItem`, and tells it to call a function named `toggleToDoItemState` in response. आप अगले कार्ड के साथ उस फंक्शन को बनाएँगे !
+**double-click** के लिए इवेंट लिस्टनेर (event listener) को `toDoItem` से जोड़ता है , और जवाब में इसे ` toggleToDoItemState` नामक एक फ़ंक्शन को कॉल करने के लिए कहता है। आप अगले कार्ड के साथ उस फंक्शन को बनाएँगे !
 
 --- /collapse ---
 
 --- task ---
 
-Now, connect to the function to the **Add** button: just change your `addToDoItem` function to get the text from the box and pass it to the `newToDoItem` function you've just created.
+अब, ** Add ** बटन को फ़ंक्शन से कनेक्ट करें: बस अपना ` addToDoItem ` फंक्शन बदलें ताकि बॉक्स से टेक्स्ट प्राप्त कर पाए और ` newToDoItem ` फ़ंक्शन को पास करे, जो आपने अभी बनाया है।
 
 ```JavaScript
 function addToDoItem() {
