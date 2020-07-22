@@ -14,7 +14,7 @@
 
 --- collapse ---
 ---
-title: What you will learn
+title: आप क्या सीखेंगे
 ---
 
   - JavaScript बनाने और संशोधित करने के लिए एक ऑनलाइन एडीटर (editor) का उपयोग करना
