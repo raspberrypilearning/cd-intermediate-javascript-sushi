@@ -80,7 +80,7 @@ Connect the **Empty List** button — which has the Id `empty-button` — to an
 
 --- task ---
 
-Connect the **Empty List** button — which has the Id `save-button` — to an alerting function called `saveList`.
+Connect the **Save List** button — which has the Id `save-button` — to an alerting function called `saveList`.
 
 --- /task ---
 
