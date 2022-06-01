@@ -2,7 +2,7 @@
 title: कार्य-सूची
 hero_image: images/banner.png
 description: जरूरी नोट्स स्टोर करने के लिए एक कार्य-सूची वेब ऐप को कोड करें
-theme: red #possible values: blue, green, navy, orange, red, turquoise, violet, yellow
+theme: red
 duration: 3
 listed: true
 ingredient: false
@@ -16,12 +16,16 @@ software: html-css-javascript, scratch, python
 version: 3
 last_tested: 2017-01-01
 steps:
-  - title: परिचय
-  - title: तैयार हो जाये
-  - title: अपने बटनों में एक्शन जोड़ें
-  - title: टू-डू आइटम्स जोड़े
-  - title: पूरा करने वाले आइटम्स
-  - title: चीज़ें हटाए
-  - title: सूची को सहेजें
-  - title: सहेजी गई सूची लोड करें
-  - title: "चुनौती: स्वचालित (automatic) सहेजना"
+- title: परिचय
+- title: तैयार हो जाये
+- title: अपने बटनों में एक्शन जोड़ें
+- title: टू-डू आइटम्स जोड़े
+  completion:
+  - engaged
+- title: पूरा करने वाले आइटम्स
+- title: चीज़ें हटाए
+- title: सूची को सहेजें
+- title: सहेजी गई सूची लोड करें
+  completion:
+  - internal
+- title: 'चुनौती: स्वचालित (automatic) सहेजना'

@@ -1,7 +1,8 @@
+---
 title: To-do list
 hero_image: images/banner.png
 description: Code a to-do list web app to store important notes
-theme: red # possible values: blue, green, navy, orange, red, turquoise, violet, yellow
+theme: red
 duration: 3
 listed: true
 ingredient: false
@@ -14,13 +15,17 @@ hardware: electronic-components, sense-hat
 software: html-css-javascript, scratch, python
 version: 3
 last_tested: 2017-01-01
-steps: 
+steps:
 - title: Introduction
 - title: Get set up
 - title: Add action to your buttons
 - title: Add to-do items
+  completion:
+  - engaged
 - title: Completing items
 - title: Remove items
 - title: Save the list
 - title: Load a saved list
-- title: "Challenge: automatic saving"
+  completion:
+  - internal
+- title: 'Challenge: automatic saving'
