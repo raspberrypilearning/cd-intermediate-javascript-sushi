@@ -17,13 +17,15 @@ version: 3
 last_tested: 2017-01-01
 steps:
 - title: Introduction
-  completion: engaged
 - title: Get set up
 - title: Add action to your buttons
 - title: Add to-do items
+  completion:
+  - engaged
 - title: Completing items
 - title: Remove items
 - title: Save the list
 - title: Load a saved list
-  completion: internal
+  completion:
+  - internal
 - title: 'Challenge: automatic saving'
